@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Our Story ✨ Princess Tanya &amp; Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "pink-primary": "#f472b6",
+            "pink-glow": "#ff85a1",
+            "pink-deep": "#20041b",
+            "pink-surface": "#2d0827"
+          },
+          fontFamily: {
+            "serif": ["'Playfair Display'", "serif"],
+            "sans": ["'Plus Jakarta Sans'", "sans-serif"],
+            "script": ["'Caveat'", "cursive"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    * {
+      cursor: url('assets/icons/wand_cursor.svg') 6 6, auto !important;
+    }
+    body {
+      background-color: #170215;
+      background-image: radial-gradient(circle at 50% 20%, rgba(244, 114, 182, 0.15) 0%, transparent 60%),
+                        radial-gradient(circle at 90% 80%, rgba(251, 113, 133, 0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 10% 90%, rgba(192, 132, 252, 0.1) 0%, transparent 50%);
+      color: #fff0f6;
+      overflow-x: hidden;
+    }
+    .glass-panel {
+      background: rgba(45, 8, 39, 0.55);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(244, 114, 182, 0.25);
+    }
+    .glass-panel:hover {
+      border-color: rgba(244, 114, 182, 0.45);
+      box-shadow: 0 10px 35px rgba(236, 72, 153, 0.25);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-pink-500 selection:text-white">
+
+  <!-- Magic Sparkle Trail Canvas -->
+  <canvas id="trailCanvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-[94%] max-w-5xl">
+    <div class="glass-panel rounded-full px-6 py-3 flex items-center justify-between shadow-[0_8px_30px_rgba(0,0,0,0.4)]">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <span class="text-2xl group-hover:scale-110 transition-transform">👑</span>
+          <span class="font-serif font-bold text-lg text-white">Princess Tanya <span class="text-pink-400 font-sans text-xs uppercase tracking-widest ml-1">Our Story</span></span>
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 text-white font-semibold text-xs shadow-[0_0_16px_rgba(244,114,182,0.4)] hover:brightness-110 transition-all">
+          <span class="material-symbols-outlined text-sm">celebration</span>
+          <span>Back to Celebration</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-36 pb-20 px-6 max-w-4xl mx-auto text-center relative">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-950/70 border border-pink-400/40 text-pink-300 text-xs font-semibold uppercase tracking-wider mb-6">
+      <span class="material-symbols-outlined text-sm text-pink-300">auto_stories</span>
+      <span>The Chronicles of Princess Tanya &amp; Us</span>
+      <span class="material-symbols-outlined text-sm text-pink-300">sparkles</span>
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-serif font-bold leading-tight text-white mb-6">
+      Every Love Story is Beautiful, <br/>
+      <span class="bg-gradient-to-r from-pink-300 via-rose-300 to-amber-200 bg-clip-text text-transparent italic">
+        But Ours is My Favorite Fairytale.
+      </span>
+    </h1>
+    <p class="text-pink-100/80 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+      A walk through every shared giggle, every quiet kiss, every night out, and all the moments that made me fall hopelessly in love with you.
+    </p>
+  </section>
+
+  <!-- Chapter Timeline -->
+  <section class="max-w-4xl mx-auto px-6 pb-24 relative">
+    <!-- Center Line -->
+    <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pink-500 via-rose-400 to-pink-500/10 -translate-x-1/2"></div>
+
+    <!-- Chapter 1 -->
+    <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+      <div class="w-full md:w-5/12 order-2 md:order-1 text-left md:text-right pr-0 md:pr-8 pl-12 md:pl-0">
+        <span class="text-xs uppercase tracking-widest text-pink-400 font-bold">Chapter 1 • The Beginning</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-1">The Night You Wore Pink</h3>
+        <p class="text-sm text-pink-100/80 mt-2 leading-relaxed">
+          Golden lights, your favorite pink dress, and you wrapped around me like you never wanted to let go. That dinner is still one of my favorite nights.
+        </p>
+        <span class="inline-block mt-3 px-3 py-1 rounded-full bg-pink-950/60 border border-pink-400/30 text-xs text-pink-200 font-medium">🌆 Rooftop Dinner Date</span>
+      </div>
+      <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-pink-500 border-4 border-[#170215] flex items-center justify-center text-white shadow-[0_0_20px_rgba(244,114,182,0.8)] z-10">
+        <span class="text-sm">🌟</span>
+      </div>
+      <div class="w-full md:w-5/12 order-1 md:order-2 pl-12 md:pl-8 mb-4 md:mb-0">
+        <div class="glass-panel rounded-2xl overflow-hidden p-2">
+          <img src="assets/images/memory_1.JPG" alt="The Night You Wore Pink" class="w-full aspect-[3/4] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter 2 -->
+    <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+      <div class="w-full md:w-5/12 order-1 pl-12 md:pl-0 md:pr-8 mb-4 md:mb-0">
+        <div class="glass-panel rounded-2xl overflow-hidden p-2">
+          <img src="assets/images/memory_2.JPG" alt="A Kiss on the Forehead" class="w-full aspect-[3/4] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+      </div>
+      <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-pink-500 border-4 border-[#170215] flex items-center justify-center text-white shadow-[0_0_20px_rgba(244,114,182,0.8)] z-10">
+        <span class="text-sm">🤍</span>
+      </div>
+      <div class="w-full md:w-5/12 order-2 pl-12 md:pl-8 text-left">
+        <span class="text-xs uppercase tracking-widest text-pink-400 font-bold">Chapter 2 • Pure Magic</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-1">A Kiss on the Forehead</h3>
+        <p class="text-sm text-pink-100/80 mt-2 leading-relaxed">
+          No big occasion, no camera-ready smile — just you closing your eyes and leaning in. Some of the softest memories are the ones nobody plans.
+        </p>
+        <span class="inline-block mt-3 px-3 py-1 rounded-full bg-pink-950/60 border border-pink-400/30 text-xs text-pink-200 font-medium">🤍 Quiet Little Moments</span>
+      </div>
+    </div>
+
+    <!-- Chapter 3 -->
+    <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+      <div class="w-full md:w-5/12 order-2 md:order-1 text-left md:text-right pr-0 md:pr-8 pl-12 md:pl-0">
+        <span class="text-xs uppercase tracking-widest text-pink-400 font-bold">Chapter 3 • Adventure</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-1">Gallery Hopping Nights</h3>
+        <p class="text-sm text-pink-100/80 mt-2 leading-relaxed">
+          Wandering around aimlessly, leaning into each other under the streetlights, pretending we had somewhere important to be. We never did — you were always the destination.
+        </p>
+        <span class="inline-block mt-3 px-3 py-1 rounded-full bg-pink-950/60 border border-pink-400/30 text-xs text-pink-200 font-medium">🎨 City Lights &amp; Us</span>
+      </div>
+      <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-pink-500 border-4 border-[#170215] flex items-center justify-center text-white shadow-[0_0_20px_rgba(244,114,182,0.8)] z-10">
+        <span class="text-sm">🎨</span>
+      </div>
+      <div class="w-full md:w-5/12 order-1 md:order-2 pl-12 md:pl-8 mb-4 md:mb-0">
+        <div class="glass-panel rounded-2xl overflow-hidden p-2">
+          <img src="assets/images/memory_3.jpeg" alt="Gallery Hopping Nights" class="w-full aspect-[3/4] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter 4 -->
+    <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+      <div class="w-full md:w-5/12 order-1 pl-12 md:pl-0 md:pr-8 mb-4 md:mb-0">
+        <div class="glass-panel rounded-2xl overflow-hidden p-2">
+          <img src="assets/images/memory_4.JPG" alt="Dressed Up, Lit Up" class="w-full aspect-[3/4] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+      </div>
+      <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-pink-500 border-4 border-[#170215] flex items-center justify-center text-white shadow-[0_0_20px_rgba(244,114,182,0.8)] z-10">
+        <span class="text-sm">✨</span>
+      </div>
+      <div class="w-full md:w-5/12 order-2 pl-12 md:pl-8 text-left">
+        <span class="text-xs uppercase tracking-widest text-pink-400 font-bold">Chapter 4 • Sweet Mundane</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-1">Dressed Up, Lit Up</h3>
+        <p class="text-sm text-pink-100/80 mt-2 leading-relaxed">
+          All dressed up with the city sparkling behind us, your smile outshining every light on that building. I don't remember the occasion — I only remember how happy you looked.
+        </p>
+        <span class="inline-block mt-3 px-3 py-1 rounded-full bg-pink-950/60 border border-pink-400/30 text-xs text-pink-200 font-medium">✨ Festive &amp; Glowing</span>
+      </div>
+    </div>
+
+    <!-- Chapter 5 -->
+    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+      <div class="w-full md:w-5/12 order-2 md:order-1 text-left md:text-right pr-0 md:pr-8 pl-12 md:pl-0">
+        <span class="text-xs uppercase tracking-widest text-pink-400 font-bold">Chapter 5 • Forever</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-1">Matching Like Dorks</h3>
+        <p class="text-sm text-pink-100/80 mt-2 leading-relaxed">
+          Matching t-shirts, holding hands like it was the most normal thing in the world — because with you, being a little ridiculous is my favorite way to be.
+        </p>
+        <span class="inline-block mt-3 px-3 py-1 rounded-full bg-pink-950/60 border border-pink-400/30 text-xs text-pink-200 font-medium">🕷️ Twin Spidey Energy</span>
+      </div>
+      <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-pink-500 border-4 border-[#170215] flex items-center justify-center text-white shadow-[0_0_20px_rgba(244,114,182,0.8)] z-10">
+        <span class="text-sm">💖</span>
+      </div>
+      <div class="w-full md:w-5/12 order-1 md:order-2 pl-12 md:pl-8 mb-4 md:mb-0">
+        <div class="glass-panel rounded-2xl overflow-hidden p-2">
+          <img src="assets/images/memory_5.JPG" alt="Matching Like Dorks" class="w-full aspect-[3/4] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Handwritten Keepsake Note Section -->
+  <section class="max-w-2xl mx-auto px-6 pb-28 text-center">
+    <div class="glass-panel rounded-3xl p-8 relative shadow-[0_10px_40px_rgba(236,72,153,0.3)]">
+      <span class="material-symbols-outlined text-4xl text-pink-400 mb-3">favorite</span>
+      <h3 class="font-serif text-2xl font-bold text-white">To Tanya, My Forever Princess</h3>
+      <p class="font-script text-2xl text-pink-200 leading-relaxed mt-4">
+        "I loved you yesterday, I love you still, I always have, I always will. Thank you for making my life the most enchanting adventure."
+      </p>
+      <div class="mt-6">
+        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white font-bold text-sm shadow-[0_4px_20px_rgba(244,114,182,0.4)] hover:scale-105 transition-all">
+          <span class="material-symbols-outlined text-base">cake</span>
+          <span>Celebrate Princess Tanya's Birthday 🎉</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Magic Sparkle Trail Script -->
+  <script>
+    const canvas = document.getElementById('trailCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    window.addEventListener('mousemove', (e) => {
+      for (let i = 0; i < 3; i++) {
+        particles.push({
+          x: e.clientX,
+          y: e.clientY,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2 - 1,
+          size: Math.random() * 4 + 2,
+          color: ['#f472b6', '#fb7185', '#ffd166', '#ffffff'][Math.floor(Math.random() * 4)],
+          alpha: 1
+        });
+      }
+    });
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.025;
+        p.size *= 0.96;
+
+        ctx.save();
+        ctx.globalAlpha = Math.max(p.alpha, 0);
+        ctx.fillStyle = p.color;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+      particles = particles.filter(p => p.alpha > 0);
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+@keyframes floatSlow { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+.animate-float-slow { animation: floatSlow 4s ease-in-out infinite; }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary-fixed": "#ffd9df",
+                "on-background": "#e9ddff",
+                "tertiary-fixed": "#f0dbff",
+                "on-tertiary-container": "#591a92",
+                "inverse-surface": "#e9ddff",
+                "secondary": "#ebbf88",
+                "on-error": "#690005",
+                "surface-variant": "#38314b",
+                "surface-container-low": "#1e1731",
+                "error-container": "#93000a",
+                "on-error-container": "#ffdad6",
+                "on-secondary": "#452b02",
+                "on-tertiary-fixed-variant": "#62259b",
+                "secondary-fixed": "#ffddb6",
+                "on-surface": "#e9ddff",
+                "on-primary-container": "#771b38",
+                "on-secondary-fixed-variant": "#5f4116",
+                "secondary-fixed-dim": "#ebbf88",
+                "error": "#ffb4ab",
+                "outline": "#a38b8e",
+                "outline-variant": "#554245",
+                "inverse-primary": "#a03b56",
+                "on-secondary-fixed": "#2a1800",
+                "primary-fixed-dim": "#ffb1c0",
+                "surface-container-high": "#2d2640",
+                "on-secondary-container": "#dcb17c",
+                "surface-dim": "#160f28",
+                "surface-tint": "#ffb1c0",
+                "primary": "#ffb1c0",
+                "tertiary": "#ddb8ff",
+                "surface-bright": "#3d3550",
+                "on-primary": "#630829",
+                "tertiary-container": "#c993ff",
+                "secondary-container": "#624318",
+                "tertiary-fixed-dim": "#ddb8ff",
+                "surface-container-lowest": "#110a23",
+                "primary-container": "#ff85a1",
+                "on-tertiary-fixed": "#2c0051",
+                "surface-container": "#221b35",
+                "on-tertiary": "#490081",
+                "on-surface-variant": "#dbc0c4",
+                "on-primary-fixed-variant": "#81233f",
+                "on-primary-fixed": "#3f0016",
+                "surface-container-highest": "#38314b",
+                "inverse-on-surface": "#342c47",
+                "surface": "#160f28",
+                "background": "#160f28"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "space-md": "1rem",
+                "space-lg": "1.5rem",
+                "space-xs": "0.5rem",
+                "space-sm": "0.75rem",
+                "space-3xl": "4rem",
+                "space-xxs": "0.25rem",
+                "space-2xl": "3rem",
+                "gutter-mobile": "1rem",
+                "container-max": "1140px",
+                "gutter-desktop": "1.5rem",
+                "space-xl": "2rem"
+        },
+        "fontFamily": {
+                "display-hero-mobile": [
+                        "Playfair Display"
+                ],
+                "headline-lg-mobile": [
+                        "Playfair Display"
+                ],
+                "body-sm": [
+                        "Plus Jakarta Sans"
+                ],
+                "label-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "display-hero": [
+                        "Playfair Display"
+                ],
+                "label-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "label-sm": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-sm": [
+                        "Playfair Display"
+                ],
+                "headline-lg": [
+                        "Playfair Display"
+                ],
+                "body-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-md": [
+                        "Playfair Display"
+                ]
+        },
+        "fontSize": {
+                "display-hero-mobile": [
+                        "38px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-hero": [
+                        "56px",
+                        {
+                                "lineHeight": "68px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "11px",
+                        {
+                                "lineHeight": "14px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "36px",
+                        {
+                                "lineHeight": "44px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "15px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-x-hidden"><canvas class="fixed inset-0 pointer-events-none z-50 w-full h-full" id="confetti-canvas"></canvas><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-40 -left-32 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl"></div><div class="absolute top-1/4 right-0 w-[30rem] h-[30rem] rounded-full bg-tertiary-container/15 blur-3xl"></div><div class="absolute -bottom-20 left-1/3 w-[36rem] h-[36rem] rounded-full bg-secondary/10 blur-3xl"></div></div><header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.25)]"><div class="h-20 max-w-[1140px] mx-auto px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center shadow-[0_0_16px_rgba(255,177,192,0.35)]"><span class="material-symbols-outlined text-primary text-[20px]">favorite</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Forever &amp; Always</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase mt-0.5">Sept 29 • Milestone</span></div></div><nav class="hidden xl:flex items-center gap-space-xxs bg-surface-container-low/60 p-1.5 rounded-full backdrop-blur-md" data-active-classes="bg-surface-variant text-primary font-label-lg rounded-full"><a aria-current="page" class="px-space-sm py-1.5 transition-all duration-200 bg-surface-variant text-primary font-label-lg rounded-full" data-path="birthday-wish" href="#">Birthday Wish</a><a class="px-space-sm py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all duration-200" data-path="interactive-3d-cake" href="#interactive-cake-section">Interactive 3D Cake</a><a class="px-space-sm py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all duration-200" data-path="pop-and-win-mini-game" href="#balloon-game">Pop &amp; Win Mini-Game</a><a class="px-space-sm py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all duration-200" data-path="love-letter-and-memories" href="#reasons-vault">Love Letter &amp; Memories</a><a class="px-space-sm py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all duration-200" data-path="wish-jar" href="#wish-jar-section">Wish Jar</a></nav><div class="flex items-center gap-space-xs"><button aria-label="Celebration Confetti" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-secondary hover:text-on-surface flex items-center justify-center transition-all duration-200 shadow-[0_0_12px_rgba(235,191,136,0.2)]" id="header-confetti-btn" title="Blast Confetti" type="button"><span class="material-symbols-outlined text-[20px]">celebration</span></button><button aria-label="Romantic Music Soundtrack" class="h-10 px-space-sm rounded-full bg-surface-container-low hover:bg-surface-container-high border border-primary/20 flex items-center gap-2 transition-all duration-200 shadow-[0_0_15px_rgba(255,133,161,0.25)]" id="music-toggle-btn" title="Toggle Birthday Melody" type="button"><div class="flex items-end gap-0.5 h-3.5 px-0.5" id="header-soundwave"><span class="w-0.5 h-2 bg-primary rounded-full transition-all"></span><span class="w-0.5 h-3 bg-primary rounded-full transition-all"></span><span class="w-0.5 h-1.5 bg-primary rounded-full transition-all"></span><span class="w-0.5 h-2.5 bg-primary rounded-full transition-all"></span></div><span class="font-label-sm text-label-sm text-primary font-semibold hidden md:inline" id="music-btn-text">Play Song 🎶</span><span class="material-symbols-outlined text-primary text-[18px]" id="music-btn-icon">music_note</span></button><a class="hidden sm:inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-gradient-to-r from-primary-container to-secondary text-on-secondary-fixed font-label-lg text-label-lg shadow-[0_0_20px_rgba(255,133,161,0.45)] hover:opacity-95 transition-all duration-200" href="#wish-jar-section"><span class="material-symbols-outlined text-[18px]">auto_awesome</span><span>Make a Wish</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_10px_rgba(255,177,192,0.4)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative z-10 w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Stardust Ribbon Accent -->
+<div class="relative w-full max-w-[1140px] mx-auto px-gutter-desktop pt-space-md">
+<div class="flex items-center justify-between py-2 px-space-md rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-md border border-white/5">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary-container text-on-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">A Love Story Written For September 29th</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="hidden sm:inline-flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">favorite</span> Infinity &amp; Beyond
+        </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary-fixed font-label-sm">Chapter 29</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: HERO & 3D INTERACTIVE CELEBRATION -->
+<section class="relative w-full max-w-[1140px] mx-auto px-gutter-desktop pt-space-lg pb-space-2xl" id="interactive-cake-section">
+<!-- Ambient Luminous Glow Background -->
+<div class="absolute -top-12 left-1/4 w-96 h-96 rounded-full bg-primary-container/25 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 right-10 w-80 h-80 rounded-full bg-secondary/15 blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col gap-space-xl">
+<!-- Title & Badges cluster -->
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-space-sm">
+<div class="flex flex-wrap items-center justify-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-[14px]">cake</span> Born on September 29
+          </span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm shadow-sm flex items-center gap-1 border border-secondary/20">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">favorite</span> Level 100 in My Heart
+          </span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm shadow-sm flex items-center gap-1 border border-tertiary/20">
+<span class="material-symbols-outlined text-[14px]">sparkles</span> Pure Magic
+          </span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight">
+          Happy Birthday to My Favorite Person in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Universe</span> ✨
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Celebrating the magic of you on September 29th &amp; every single day after. You make ordinary days feel like poetry and dreams feel within reach.
+        </p>
+</div>
+<!-- FEATURE 2: PROMINENT GLOWING LIVE COUNTDOWN TO SEPTEMBER 29TH -->
+<div class="w-full max-w-3xl mx-auto rounded-3xl p-5 md:p-6 bg-gradient-to-r from-surface-container-high/90 via-surface-container/90 to-surface-container-high/90 backdrop-blur-xl border border-primary/30 shadow-[0_12px_40px_rgba(255,133,161,0.2)] flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left z-10">
+<div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm mb-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>Countdown to September 29</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-1.5">
+The Big Moment Arrives In 🎂
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Counting every golden second until we celebrate you!</p>
+</div>
+<!-- 4 Digital Cards -->
+<div class="flex items-center gap-2 sm:gap-3 z-10">
+<div class="flex flex-col items-center p-2.5 sm:p-3 min-w-[58px] sm:min-w-[68px] rounded-2xl bg-surface-container-lowest/80 border border-primary/30 backdrop-blur-md shadow-lg shadow-primary/10">
+<span class="font-headline-lg text-[26px] sm:text-[32px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary-container leading-none" id="countdown-days">00</span>
+<span class="font-label-sm text-[10px] sm:text-[11px] uppercase tracking-wider text-secondary mt-1">Days</span>
+</div>
+<span class="text-primary/60 font-bold text-xl">:</span>
+<div class="flex flex-col items-center p-2.5 sm:p-3 min-w-[58px] sm:min-w-[68px] rounded-2xl bg-surface-container-lowest/80 border border-secondary/30 backdrop-blur-md shadow-lg shadow-secondary/10">
+<span class="font-headline-lg text-[26px] sm:text-[32px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-secondary to-secondary-fixed leading-none" id="countdown-hours">00</span>
+<span class="font-label-sm text-[10px] sm:text-[11px] uppercase tracking-wider text-secondary mt-1">Hours</span>
+</div>
+<span class="text-secondary/60 font-bold text-xl">:</span>
+<div class="flex flex-col items-center p-2.5 sm:p-3 min-w-[58px] sm:min-w-[68px] rounded-2xl bg-surface-container-lowest/80 border border-tertiary/30 backdrop-blur-md shadow-lg shadow-tertiary/10">
+<span class="font-headline-lg text-[26px] sm:text-[32px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-tertiary to-tertiary-fixed leading-none" id="countdown-minutes">00</span>
+<span class="font-label-sm text-[10px] sm:text-[11px] uppercase tracking-wider text-tertiary mt-1">Mins</span>
+</div>
+<span class="text-tertiary/60 font-bold text-xl">:</span>
+<div class="flex flex-col items-center p-2.5 sm:p-3 min-w-[58px] sm:min-w-[68px] rounded-2xl bg-surface-container-lowest/80 border border-primary/40 backdrop-blur-md shadow-lg shadow-primary/20">
+<span class="font-headline-lg text-[26px] sm:text-[32px] font-bold text-primary animate-pulse leading-none" id="countdown-seconds">00</span>
+<span class="font-label-sm text-[10px] sm:text-[11px] uppercase tracking-wider text-primary mt-1">Secs</span>
+</div>
+</div>
+<!-- Test Blast Button -->
+<div class="z-10">
+<button class="px-4 py-2.5 rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-on-secondary-fixed font-label-md text-label-md font-semibold shadow-[0_0_20px_rgba(255,133,161,0.45)] hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 whitespace-nowrap" id="test-confetti-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">celebration</span>
+<span>Test Confetti Blast 🎉</span>
+</button>
+</div>
+</div>
+<!-- Dedicated Floating Audio Player Ribbon Bar -->
+<div class="w-full max-w-2xl mx-auto -mt-2 mb-2 p-2.5 px-4 rounded-2xl bg-surface-container-low/70 border border-primary/20 backdrop-blur-md flex items-center justify-between shadow-lg">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">music_note</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span>Romantic Birthday Melody</span>
+<span class="text-[11px] px-2 py-0.2 rounded-full bg-secondary/20 text-secondary" id="audio-status-pill">Paused</span>
+</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Luminous starlight chimes synthesized for September 29th</span>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-primary border border-primary/30 font-label-sm text-label-sm flex items-center gap-1.5 transition-all active:scale-95 shadow-sm" id="banner-music-btn" type="button">
+<span class="material-symbols-outlined text-[16px]" id="banner-play-icon">play_arrow</span>
+<span id="banner-music-label">Play Melody</span>
+</button>
+</div>
+<!-- Main 3D Cake Canvas + Dynamic Overlay Banner -->
+<div class="relative w-full rounded-3xl overflow-hidden shadow-2xl bg-surface-container-lowest/80 border border-white/10 group">
+<!-- Floating Cinematic Badges Over Cake Canvas -->
+<div class="absolute top-5 left-5 z-20 flex flex-wrap gap-2 pointer-events-none">
+<div class="px-3 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 shadow-lg">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>3-Tiered Rose &amp; Cream Confection</span>
+</div>
+<div class="px-3 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-secondary font-label-sm text-label-sm flex items-center gap-1.5 shadow-lg">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span>Candle Count: 7 Wishes</span>
+</div>
+</div>
+<div class="absolute top-5 right-5 z-20 pointer-events-none hidden sm:block">
+<div class="px-3 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-tertiary font-label-sm text-label-sm flex items-center gap-1.5 shadow-lg animate-float-slow">
+<span class="material-symbols-outlined text-[14px]">360</span>
+<span>Drag or hover to rotate cake • Click for spin burst! ✨</span>
+</div>
+</div>
+<!-- The Required 3D WebGL Element updated with ANIMATION_5 -->
+<!-- STITCH_THREEJS_START:ANIMATION_5 class="w-full h-[540px] rounded-3xl overflow-hidden relative shadow-2xl border border-white/10 bg-surface-container-lowest/80 block" -->
+<div class="w-full h-[540px] rounded-3xl overflow-hidden relative shadow-2xl border border-white/10 bg-surface-container-lowest/80 block" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_5" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_5');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x160f28, 0.03);
+
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+camera.position.set(0, 1.8, 8.5);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+container.appendChild(renderer.domElement);
+
+// Lighting setup for glowing romantic cake
+const ambientLight = new THREE.AmbientLight(0xffe8ed, 1.6);
+scene.add(ambientLight);
+
+const mainSpot = new THREE.SpotLight(0xfff3b0, 4.0, 30, Math.PI / 4, 0.4);
+mainSpot.position.set(0, 9, 6);
+scene.add(mainSpot);
+
+const pinkRimLight = new THREE.PointLight(0xff758f, 3.8, 25);
+pinkRimLight.position.set(4, 3, 3);
+scene.add(pinkRimLight);
+
+const goldFillLight = new THREE.PointLight(0xffd166, 3.2, 25);
+goldFillLight.position.set(-4, 1, 2);
+scene.add(goldFillLight);
+
+// Master Cake & Decor Group
+const masterGroup = new THREE.Group();
+scene.add(masterGroup);
+
+// Luxurious Ornate Pedestal / Cake Stand
+const standMat = new THREE.MeshPhongMaterial({ color: 0xfdf0d5, shininess: 120, specular: 0xffffff });
+const goldTrimMat = new THREE.MeshPhongMaterial({ color: 0xf3c68f, shininess: 140, specular: 0xffe89e });
+
+const plateBaseGeo = new THREE.CylinderGeometry(2.4, 2.5, 0.16, 48);
+const plateBase = new THREE.Mesh(plateBaseGeo, standMat);
+plateBase.position.y = -1.5;
+masterGroup.add(plateBase);
+
+const plateStandGeo = new THREE.CylinderGeometry(0.7, 1.1, 0.6, 32);
+const plateStand = new THREE.Mesh(plateStandGeo, goldTrimMat);
+plateStand.position.y = -1.85;
+masterGroup.add(plateStand);
+
+const plateFootGeo = new THREE.CylinderGeometry(1.6, 1.8, 0.2, 32);
+const plateFoot = new THREE.Mesh(plateFootGeo, standMat);
+plateFoot.position.y = -2.2;
+masterGroup.add(plateFoot);
+
+// Tier 1 (Base - Rich Velvet / Cream with frosting piping)
+const tier1Geo = new THREE.CylinderGeometry(2.1, 2.1, 0.85, 48);
+const tier1Mat = new THREE.MeshPhongMaterial({ color: 0xffe3ea, shininess: 70, specular: 0xffffff });
+const tier1 = new THREE.Mesh(tier1Geo, tier1Mat);
+tier1.position.y = -1.0;
+masterGroup.add(tier1);
+
+// Piping around Tier 1 base
+const trim1 = new THREE.Mesh(new THREE.TorusGeometry(2.12, 0.1, 16, 48), goldTrimMat);
+trim1.rotation.x = Math.PI / 2;
+trim1.position.y = -1.4;
+masterGroup.add(trim1);
+
+// Tier 2 (Middle - Rose Quartz Pink)
+const tier2Geo = new THREE.CylinderGeometry(1.55, 1.55, 0.8, 48);
+const tier2Mat = new THREE.MeshPhongMaterial({ color: 0xff85a1, shininess: 85, specular: 0xffd9e8 });
+const tier2 = new THREE.Mesh(tier2Geo, tier2Mat);
+tier2.position.y = -0.2;
+masterGroup.add(tier2);
+
+const trim2 = new THREE.Mesh(new THREE.TorusGeometry(1.56, 0.09, 16, 48), goldTrimMat);
+trim2.rotation.x = Math.PI / 2;
+trim2.position.y = -0.6;
+masterGroup.add(trim2);
+
+// Tier 3 (Top Tier - Champagne Cream with drip glaze texture)
+const tier3Geo = new THREE.CylinderGeometry(1.05, 1.05, 0.75, 48);
+const tier3Mat = new THREE.MeshPhongMaterial({ color: 0xffcad4, shininess: 95, specular: 0xffffff });
+const tier3 = new THREE.Mesh(tier3Geo, tier3Mat);
+tier3.position.y = 0.55;
+masterGroup.add(tier3);
+
+const trim3 = new THREE.Mesh(new THREE.TorusGeometry(1.06, 0.08, 16, 48), goldTrimMat);
+trim3.rotation.x = Math.PI / 2;
+trim3.position.y = 0.2;
+masterGroup.add(trim3);
+
+// Frosting Rosettes & Strawberries on Tier edges
+const strawberryGeo = new THREE.ConeGeometry(0.12, 0.22, 16);
+const strawberryMat = new THREE.MeshPhongMaterial({ color: 0xd90429, shininess: 130, specular: 0xff85a1 });
+
+for (let i = 0; i < 14; i++) {
+  const angle = (i / 14) * Math.PI * 2;
+  const berry = new THREE.Mesh(strawberryGeo, strawberryMat);
+  berry.rotation.x = Math.PI;
+  berry.position.set(Math.cos(angle) * 1.85, -0.52, Math.sin(angle) * 1.85);
+  masterGroup.add(berry);
+}
+
+for (let i = 0; i < 9; i++) {
+  const angle = (i / 9) * Math.PI * 2 + 0.2;
+  const berry = new THREE.Mesh(strawberryGeo, strawberryMat);
+  berry.rotation.x = Math.PI;
+  berry.position.set(Math.cos(angle) * 1.35, 0.22, Math.sin(angle) * 1.35);
+  masterGroup.add(berry);
+}
+
+// "29" Golden Cake Topper & Romantic Heart
+const topperGroup = new THREE.Group();
+topperGroup.position.set(0, 1.25, 0);
+
+// Ring Heart Topper
+const heartRingGeo = new THREE.TorusGeometry(0.42, 0.06, 16, 32);
+const topperMat = new THREE.MeshPhongMaterial({ color: 0xffd166, shininess: 160, specular: 0xffffff });
+const heartRing = new THREE.Mesh(heartRingGeo, topperMat);
+topperGroup.add(heartRing);
+
+// 7 Delicate Candles with animated flame flickers
+const candleGeo = new THREE.CylinderGeometry(0.045, 0.045, 0.45, 16);
+const candleMat = new THREE.MeshPhongMaterial({ color: 0xfff0f5, shininess: 80 });
+const flameGeo = new THREE.ConeGeometry(0.07, 0.22, 16);
+const flameMat = new THREE.MeshBasicMaterial({ color: 0xff9e00 });
+const innerFlameGeo = new THREE.ConeGeometry(0.04, 0.14, 16);
+const innerFlameMat = new THREE.MeshBasicMaterial({ color: 0xfffa65 });
+
+const candlePositions = [
+  [-0.65, 0.95, -0.3],
+  [0.65, 0.95, -0.3],
+  [0.0, 0.95, 0.65],
+  [-0.55, 0.95, 0.35],
+  [0.55, 0.95, 0.35],
+  [-0.25, 0.95, -0.55],
+  [0.25, 0.95, -0.55]
+];
+
+const candleFlames = [];
+candlePositions.forEach((pos) => {
+  const candle = new THREE.Mesh(candleGeo, candleMat);
+  candle.position.set(pos[0], pos[1], pos[2]);
+  masterGroup.add(candle);
+
+  const flameContainer = new THREE.Group();
+  flameContainer.position.set(pos[0], pos[1] + 0.3, pos[2]);
+  
+  const outerFlame = new THREE.Mesh(flameGeo, flameMat);
+  flameContainer.add(outerFlame);
+  
+  const innerFlame = new THREE.Mesh(innerFlameGeo, innerFlameMat);
+  innerFlame.position.y = 0.02;
+  flameContainer.add(innerFlame);
+
+  masterGroup.add(flameContainer);
+  candleFlames.push(flameContainer);
+});
+
+masterGroup.add(topperGroup);
+
+// Sparkling Fireworks / Starlight Particle Ribbon
+const particleCount = 280;
+const pGeo = new THREE.BufferGeometry();
+const pPos = new Float32Array(particleCount * 3);
+const pColors = new Float32Array(particleCount * 3);
+
+const palette = [
+  new THREE.Color(0xff758f),
+  new THREE.Color(0xffd166),
+  new THREE.Color(0xffcad4),
+  new THREE.Color(0xffffff),
+  new THREE.Color(0x9d4edd)
+];
+
+for (let i = 0; i < particleCount; i++) {
+  pPos[i * 3] = (Math.random() - 0.5) * 14;
+  pPos[i * 3 + 1] = (Math.random() - 0.5) * 9;
+  pPos[i * 3 + 2] = (Math.random() - 0.5) * 11;
+
+  const col = palette[Math.floor(Math.random() * palette.length)];
+  pColors[i * 3] = col.r;
+  pColors[i * 3 + 1] = col.g;
+  pColors[i * 3 + 2] = col.b;
+}
+
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+pGeo.setAttribute('color', new THREE.BufferAttribute(pColors, 3));
+
+const pMat = new THREE.PointsMaterial({
+  size: 0.16,
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.9,
+  blending: THREE.AdditiveBlending
+});
+const sparklers = new THREE.Points(pGeo, pMat);
+scene.add(sparklers);
+
+// Floating celebration balloons around the cake
+const balloonColors = [0xff758f, 0xffd166, 0xff85a1, 0x9d4edd, 0xfbb1bd, 0x48cae4];
+const balloons = [];
+const balloonGeo = new THREE.SphereGeometry(0.65, 32, 24);
+balloonGeo.scale(1, 1.3, 1);
+
+for (let i = 0; i < 14; i++) {
+  const bMat = new THREE.MeshPhongMaterial({
+    color: balloonColors[i % balloonColors.length],
+    shininess: 110,
+    specular: 0xffffff,
+    transparent: true,
+    opacity: 0.92
+  });
+  const balloon = new THREE.Mesh(balloonGeo, bMat);
+  const angle = (i / 14) * Math.PI * 2 + (Math.random() * 0.3);
+  const radius = 3.6 + Math.random() * 2.5;
+  const y = -1.2 + Math.random() * 5.2;
+
+  balloon.position.set(Math.cos(angle) * radius, y, Math.sin(angle) * radius);
+  balloon.userData = {
+    floatSpeed: 0.007 + Math.random() * 0.01,
+    floatOffset: Math.random() * 12,
+    drift: 0.006 + Math.random() * 0.006
+  };
+  scene.add(balloon);
+  balloons.push(balloon);
+}
+
+// Mouse tracking & interactivity
+let mouseX = 0;
+let mouseY = 0;
+let spinVelocity = 0;
+
+window.addEventListener('mousemove', (e) => {
+  mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+  mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+});
+
+window.addEventListener('click', () => {
+  spinVelocity = 0.35; // Celebratory fast spin on click
+});
+
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+// Render Loop
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const time = clock.getElapsedTime();
+
+  // Smooth rotation following cursor + auto-turn + spin burst
+  const targetRotY = mouseX * 0.5;
+  const targetRotX = mouseY * 0.22;
+  
+  masterGroup.rotation.y += (targetRotY - masterGroup.rotation.y) * 0.05 + 0.009 + spinVelocity;
+  masterGroup.rotation.x += (targetRotX - masterGroup.rotation.x) * 0.05;
+  masterGroup.position.y = Math.sin(time * 1.6) * 0.14;
+
+  if (spinVelocity > 0) {
+    spinVelocity *= 0.94;
+    if (spinVelocity < 0.001) spinVelocity = 0;
+  }
+
+  // Topper gentle pulse
+  topperGroup.rotation.y = Math.sin(time * 2.0) * 0.25;
+
+  // Candle flame animation
+  candleFlames.forEach((flame, idx) => {
+    const s = 1.0 + Math.sin(time * 14 + idx * 2.2) * 0.22;
+    flame.scale.set(s, s * 1.15, s);
+  });
+
+  // Balloon floating
+  balloons.forEach((b) => {
+    b.position.y += Math.sin(time * 2.0 + b.userData.floatOffset) * 0.005;
+    b.rotation.y += b.userData.drift;
+    b.rotation.z = Math.sin(time * 1.4 + b.userData.floatOffset) * 0.06;
+  });
+
+  // Sparkler swirl
+  sparklers.rotation.y = time * 0.06;
+  sparklers.rotation.x = Math.sin(time * 0.05) * 0.18;
+
+  renderer.render(scene, camera);
+}
+
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_5 -->
+<!-- Floating Candle Extinguish Celebration Banner (hidden by default, revealed on click) -->
+<div class="hidden absolute inset-0 z-30 bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col items-center justify-center p-space-xl text-center transition-all duration-500" id="candle-extinguish-banner">
+<div class="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center shadow-2xl mb-space-sm border border-primary/30">
+<span class="material-symbols-outlined text-primary text-[44px]">sentiment_very_satisfied</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">A Royal Wish Has Been Made</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">The Candles Are Blown Out! 🕯️💫</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-space-xs">
+            May every single desire whispered in your heart today cross constellations and return to you tenfold. I love you endlessly.
+          </p>
+<button class="mt-space-md px-space-lg py-2.5 rounded-full bg-gradient-to-r from-primary-container to-secondary text-on-secondary-fixed font-label-lg text-label-lg shadow-xl hover:scale-105 transition-transform duration-200" id="banner-close-btn">
+            Keep Celebrating ✨
+          </button>
+</div>
+<!-- Glass Action Hub Overlaid at Bottom of 3D Scene -->
+<div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 z-20 p-space-sm rounded-2xl bg-surface-container-low/85 backdrop-blur-xl shadow-2xl flex flex-wrap items-center justify-between gap-space-sm border border-white/10">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">cake</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">September 29 Cake Ritual</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Spin 360° to view your cake</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-2.5 rounded-full bg-gradient-to-r from-primary-container to-secondary text-on-secondary-fixed font-label-lg text-label-lg shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5" id="blow-candles-btn">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+<span>Blow Out the Candles 🕯️</span>
+</button>
+<a class="px-space-md py-2.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-lg text-label-lg shadow-md transition-all flex items-center gap-1.5 border border-white/5" href="#balloon-game">
+<span class="material-symbols-outlined text-[18px] text-tertiary">sports_esports</span>
+<span>Play Birthday Game 🎈</span>
+</a>
+<a class="px-space-md py-2.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-lg text-label-lg shadow-md transition-all flex items-center gap-1.5 border border-white/5" href="#reasons-vault">
+<span class="material-symbols-outlined text-[18px] text-primary">favorite</span>
+<span>Read Love Letter 💌</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Live Countdown & Milestone Ticker Bento -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-2xl bg-surface-container shadow-xl flex items-center gap-space-sm border border-white/5">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">calendar_today</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Milestone Date</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">September 29</div>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container shadow-xl flex items-center gap-space-sm border border-white/5">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">hourglass_bottom</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Time Loved You</div>
+<div class="font-headline-sm text-headline-sm text-on-surface" id="days-counter">365+ Days</div>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container shadow-xl flex items-center gap-space-sm border border-white/5">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">sentiment_satisfied</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Smiles Shared</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">∞ Infinite</div>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container shadow-xl flex items-center gap-space-sm border border-white/5">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">star</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Today's Vibe</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Queen Energy 👑</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ADORABLE ROMANTIC POPUP MODAL (TRIGGERED ON TEST OR COUNTDOWN REACHED) -->
+<div class="hidden fixed inset-0 z-50 bg-surface-container-lowest/85 backdrop-blur-2xl flex items-center justify-center p-4 transition-all duration-300" id="birthday-surprise-modal">
+<div class="relative w-full max-w-lg rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-surface-container-high to-surface-container border border-primary/40 shadow-[0_20px_60px_rgba(255,133,161,0.35)] text-center flex flex-col items-center gap-4 animate-float-slow">
+<div class="w-20 h-20 rounded-full bg-primary-container/25 flex items-center justify-center text-primary shadow-[0_0_30px_rgba(255,133,161,0.5)]">
+<span class="material-symbols-outlined text-[42px]" style="font-variation-settings: 'FILL' 1;">cake</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">✨ Happy September 29th Milestone ✨</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">Happy Birthday My Sunshine! 🎂💖</h2>
+<div class="p-4 rounded-2xl bg-surface-container-lowest/70 border border-white/5 text-body-md text-on-surface leading-relaxed text-center font-serif italic text-primary-fixed">
+"You are my favorite human, my greatest adventure, and the best thing that ever happened to me. May this year be filled with pure magic, laughter, and endless dreams coming true. I love you to infinity and beyond!"
+</div>
+<div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-surface-variant text-secondary border border-secondary/30 font-label-md text-label-md flex items-center gap-1.5 transition-all active:scale-95" id="modal-replay-music-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">music_note</span>
+<span>Replay Melody 🎶</span>
+</button>
+<button class="px-6 py-2.5 rounded-full bg-gradient-to-r from-primary-container to-secondary text-on-secondary-fixed font-label-md text-label-md font-semibold shadow-lg hover:scale-105 active:scale-95 transition-all" id="modal-close-btn" type="button">
+Close &amp; Cherish ✨
+</button>
+</div>
+</div>
+</div>
+<!-- SECTION 2: BALLOON POP LOVE QUEST MINI-GAME -->
+<section class="relative w-full max-w-[1140px] mx-auto px-gutter-desktop py-space-2xl" id="balloon-game">
+<div class="p-space-xl rounded-3xl bg-surface-container-low shadow-2xl relative overflow-hidden border border-white/5">
+<!-- Decorative Background Glows -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-tertiary-container/15 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-lg">
+<!-- Game Header & Live Scoreboard -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-space-xxs">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm w-fit border border-secondary/20">
+<span class="material-symbols-outlined text-[14px]">sports_esports</span> Playable Celebration
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">🎈 Pop The Birthday Balloons &amp; Collect Love Notes!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+              Pop floating balloons to reveal 5 secret birthday surprises and unlock compliments tailored for you!
+            </p>
+</div>
+<!-- Score Metrics Pill -->
+<div class="flex items-center gap-space-sm p-space-xs rounded-2xl bg-surface-container-high shadow-inner border border-white/5">
+<div class="px-space-md py-1.5 rounded-xl bg-surface-container text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Score</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold" id="game-score">0</div>
+</div>
+<div class="px-space-md py-1.5 rounded-xl bg-surface-container text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Streak</div>
+<div class="font-headline-sm text-headline-sm text-secondary font-bold" id="game-streak">0x</div>
+</div>
+<div class="px-space-md py-1.5 rounded-xl bg-surface-container text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Unlocked</div>
+<div class="font-headline-sm text-headline-sm text-tertiary font-bold" id="game-unlocked">0 / 5</div>
+</div>
+</div>
+</div>
+<!-- Game Canvas Area with Floating Interactive Balloons -->
+<div class="relative w-full h-[380px] rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md overflow-hidden shadow-inner flex items-center justify-center select-none border border-white/5" id="game-board">
+<!-- Floating Background Star Dots -->
+<div class="absolute top-10 left-16 w-1.5 h-1.5 bg-primary/40 rounded-full animate-ping"></div>
+<div class="absolute top-28 right-24 w-2 h-2 bg-secondary/40 rounded-full animate-ping"></div>
+<div class="absolute bottom-16 left-1/3 w-1.5 h-1.5 bg-tertiary/40 rounded-full animate-ping"></div>
+<!-- Active Floating Balloons Container -->
+<div class="relative w-full h-full" id="balloons-container">
+<!-- Balloon 1: Rose -->
+<button class="balloon-item absolute left-[10%] top-[45%] w-20 h-24 rounded-full bg-gradient-to-t from-primary to-primary-fixed shadow-[0_10px_25px_rgba(255,133,161,0.5)] cursor-pointer hover:scale-110 active:scale-95 transition-transform flex flex-col items-center justify-center animate-bounce" data-balloon-id="1" data-note="You have the most infectious, radiant laugh that instantly fixes any bad day." type="button">
+<span class="material-symbols-outlined text-on-primary text-[22px]">favorite</span>
+<div class="w-0.5 h-10 bg-outline absolute -bottom-9 left-1/2"></div>
+</button>
+<!-- Balloon 2: Champagne Peach -->
+<button class="balloon-item absolute left-[28%] top-[20%] w-24 h-28 rounded-full bg-gradient-to-t from-secondary to-secondary-fixed shadow-[0_10px_25px_rgba(235,191,136,0.5)] cursor-pointer hover:scale-110 active:scale-95 transition-transform flex flex-col items-center justify-center animate-pulse" data-balloon-id="2" data-note="Your smile lights up every room and turns ordinary moments into cinematic memories." type="button">
+<span class="material-symbols-outlined text-on-secondary text-[26px]">star</span>
+<div class="w-0.5 h-12 bg-outline absolute -bottom-11 left-1/2"></div>
+</button>
+<!-- Balloon 3: Lavender Dream -->
+<button class="balloon-item absolute left-[50%] top-[38%] w-20 h-24 rounded-full bg-gradient-to-t from-tertiary to-tertiary-fixed shadow-[0_10px_25px_rgba(221,184,255,0.5)] cursor-pointer hover:scale-110 active:scale-95 transition-transform flex flex-col items-center justify-center animate-bounce" data-balloon-id="3" data-note="Coffee dates with you will forever be my absolute favorite spot on earth." type="button">
+<span class="material-symbols-outlined text-on-tertiary text-[22px]">sparkles</span>
+<div class="w-0.5 h-10 bg-outline absolute -bottom-9 left-1/2"></div>
+</button>
+<!-- Balloon 4: Mint Spark -->
+<button class="balloon-item absolute left-[70%] top-[18%] w-22 h-26 rounded-full bg-gradient-to-t from-primary-fixed to-secondary-fixed-dim shadow-[0_10px_25px_rgba(255,217,223,0.5)] cursor-pointer hover:scale-110 active:scale-95 transition-transform flex flex-col items-center justify-center animate-pulse" data-balloon-id="4" data-note="You are fiercely intelligent, deeply kind, and breathtakingly authentic." type="button">
+<span class="material-symbols-outlined text-on-primary-fixed text-[24px]">mood</span>
+<div class="w-0.5 h-10 bg-outline absolute -bottom-9 left-1/2"></div>
+</button>
+<!-- Balloon 5: Golden Crown -->
+<button class="balloon-item absolute left-[85%] top-[40%] w-24 h-28 rounded-full bg-gradient-to-t from-secondary-fixed to-primary-container shadow-[0_10px_30px_rgba(255,221,182,0.6)] cursor-pointer hover:scale-110 active:scale-95 transition-transform flex flex-col items-center justify-center animate-bounce" data-balloon-id="5" data-note="You are my best friend, greatest confidante, and soulmate. Happy 29th!" type="button">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[26px]">workspace_premium</span>
+<div class="w-0.5 h-12 bg-outline absolute -bottom-11 left-1/2"></div>
+</button>
+</div>
+<!-- Modal Pop-Up Love Note Reveal -->
+<div class="hidden absolute inset-0 z-20 bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col items-center justify-center p-space-lg text-center" id="love-note-modal">
+<div class="w-14 h-14 rounded-full bg-primary-container/25 flex items-center justify-center text-primary mb-space-xs shadow-lg">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Love Note Unlocked!</span>
+<p class="font-headline-sm text-headline-sm text-on-surface max-w-lg mt-space-xs italic" id="love-note-text">
+              "You have the most infectious laugh!"
+            </p>
+<div class="mt-space-md flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-full bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md shadow-md transition-all" id="close-note-btn">
+                Continue Popping 🎈
+              </button>
+</div>
+</div>
+</div>
+<!-- Game Controls Bottom Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-all flex items-center gap-1.5 shadow-sm border border-white/5" id="reset-game-btn">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span> Reset Balloons
+            </button>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="game-status-label">Tap balloons to pop &amp; reveal your secrets!</span>
+</div>
+<button class="hidden px-space-lg py-2.5 rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-on-secondary-fixed font-label-lg text-label-lg shadow-xl hover:scale-105 transition-all flex items-center gap-1.5" id="grand-reward-btn">
+<span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+<span>Claim Your Grand Birthday Reward 🎁</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: REASONS WHY I LOVE YOU MEMORY VAULT -->
+<section class="relative w-full max-w-[1140px] mx-auto px-gutter-desktop py-space-2xl" id="reasons-vault">
+<div class="flex flex-col gap-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-xxs">
+<div class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm border border-primary/20">
+<span class="material-symbols-outlined text-[14px]">lock_open</span> Interactive Memory Vault
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Reasons Why I Love You Endless Amounts</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Click any card to flip it and reveal the heartfelt memories and reasons why September 29th was the greatest day in history.
+        </p>
+</div>
+<!-- 4 Interactive Flippable / Expandable Love Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Card 1 -->
+<div class="memory-card group relative p-space-lg rounded-3xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-between min-h-[260px] overflow-hidden border border-white/5">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm">Reason #29</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">touch_app</span>
+</div>
+<div class="memory-front flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Your Unmatched Warmth &amp; Kind Heart</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              The effortless way you make every stray cat feel safe, every waiter feel respected, and everyone you meet feel valued.
+            </p>
+<div class="mt-space-xs flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span>Click to read secret memory</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="memory-secret hidden mt-space-sm p-space-md rounded-2xl bg-surface-container-lowest/90 text-on-surface font-body-md text-body-md shadow-inner border border-primary/20">
+<p class="italic text-primary-fixed">
+              "Remember that chilly rainy evening when we shared a single scarf and talked about our childhood dreams until 3 AM? That was the exact second I knew I wanted to love you for the rest of my life."
+            </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="memory-card group relative p-space-lg rounded-3xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-between min-h-[260px] overflow-hidden border border-white/5">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary/20 text-secondary font-label-sm text-label-sm">Reason #09</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">touch_app</span>
+</div>
+<div class="memory-front flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">The Way Your Eyes Crinkle</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              When something is genuinely, hilariously funny and you forget to care about anything else in the world.
+            </p>
+<div class="mt-space-xs flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span>Click to read secret memory</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="memory-secret hidden mt-space-sm p-space-md rounded-2xl bg-surface-container-lowest/90 text-on-surface font-body-md text-body-md shadow-inner border border-secondary/20">
+<p class="italic text-secondary-fixed">
+              "Your genuine laughter is my favorite song in existence. Whenever you throw your head back and laugh with your whole soul, the world makes total sense."
+            </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="memory-card group relative p-space-lg rounded-3xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-between min-h-[260px] overflow-hidden border border-white/5">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary/20 text-tertiary font-label-sm text-label-sm">Our Genesis</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">touch_app</span>
+</div>
+<div class="memory-front flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">The Day We Met: Best Plot Twist</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Neither of us knew what was starting, but destiny was already laughing at how thoroughly we were about to fall.
+            </p>
+<div class="mt-space-xs flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span>Click to read secret memory</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="memory-secret hidden mt-space-sm p-space-md rounded-2xl bg-surface-container-lowest/90 text-on-surface font-body-md text-body-md shadow-inner border border-tertiary/20">
+<p class="italic text-tertiary-fixed">
+              "You wore that cute oversized jacket and looked at me with those curious, brilliant eyes. I texted my friends ten minutes later: 'I just met someone incredible.'"
+            </p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="memory-card group relative p-space-lg rounded-3xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-between min-h-[260px] overflow-hidden border border-white/5">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-label-sm">Our Odyssey</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">touch_app</span>
+</div>
+<div class="memory-front flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Our Adventures Across Every Horizon</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Road trips, late night supermarket grocery runs, airplane runways, and silent lazy Sunday mornings.
+            </p>
+<div class="mt-space-xs flex items-center gap-1 text-primary-container font-label-sm text-label-sm">
+<span>Click to read secret memory</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="memory-secret hidden mt-space-sm p-space-md rounded-2xl bg-surface-container-lowest/90 text-on-surface font-body-md text-body-md shadow-inner border border-primary/20">
+<p class="italic text-primary-fixed">
+              "It doesn't matter if we are dining under Parisian lights or eating takeaway noodles on the living room rug—as long as your hand is in mine, I am home."
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: MAKE A BIRTHDAY WISH JAR & SOUNDBOARD -->
+<section class="relative w-full max-w-[1140px] mx-auto px-gutter-desktop py-space-2xl" id="wish-jar-section">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Digital Wish Jar Column (7 cols) -->
+<div class="lg:col-span-7 p-space-xl rounded-3xl bg-surface-container-low shadow-2xl relative overflow-hidden flex flex-col justify-between gap-space-md border border-white/5">
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm w-fit border border-secondary/20">
+<span class="material-symbols-outlined text-[14px]">magic_button</span> Cosmic Starlight Jar
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Make a Birthday Wish ✨</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Write down your sweetest, boldest, or secret birthday dream. When you hit send, it will be sealed into the celestial registry of wishes forever.
+          </p>
+</div>
+<!-- Wish Jar Visual & Form -->
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="relative">
+<textarea class="w-full p-space-md rounded-2xl bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary shadow-inner resize-none font-body-md text-body-md border border-white/5" id="wish-input" placeholder="Type your birthday wish here, my darling... (e.g. A trip to Italy, endless happiness, a pet kitten!)" rows="3"></textarea>
+<span class="material-symbols-outlined text-primary/30 absolute right-4 bottom-4 pointer-events-none text-[24px]">favorite</span>
+</div>
+<div class="flex items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-secondary italic" id="wish-feedback">Your wish will be kept completely safe with me.</span>
+<button class="px-space-lg py-2.5 rounded-full bg-gradient-to-r from-primary-container to-secondary text-on-secondary-fixed font-label-lg text-label-lg shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 whitespace-nowrap" id="send-wish-btn">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Send Wish into the Stars ✨</span>
+</button>
+</div>
+</div>
+<!-- Flying Stars Confetti Display Box (Dynamic) -->
+<div class="hidden relative p-space-md rounded-2xl bg-surface-container text-center border border-primary/20" id="stardust-container">
+<div class="flex items-center justify-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span>Wish Cast Into The Constellations!</span>
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 italic" id="stardust-saved-wish"></p>
+</div>
+</div>
+<!-- Celebration Audio Soundboard (5 cols) -->
+<div class="lg:col-span-5 p-space-xl rounded-3xl bg-surface-container shadow-2xl flex flex-col justify-between gap-space-md border border-white/5">
+<div class="flex flex-col gap-space-xxs">
+<div class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm w-fit border border-tertiary/20">
+<span class="material-symbols-outlined text-[14px]">volume_up</span> Interactive Soundboard
+          </div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Celebration Vibes &amp; SFX</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Tap buttons below to trigger auditory &amp; visual celebration bursts!
+          </p>
+</div>
+<!-- 4 Sound Buttons Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="sfx-btn p-space-md rounded-2xl bg-surface-container-high hover:bg-surface-variant transition-all text-center flex flex-col items-center justify-center gap-space-xxs shadow-md group active:scale-95 border border-white/5" data-sfx="horn" type="button">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">celebration</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Party Horn</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">🥳 Toot Toot!</span>
+</button>
+<button class="sfx-btn p-space-md rounded-2xl bg-surface-container-high hover:bg-surface-variant transition-all text-center flex flex-col items-center justify-center gap-space-xxs shadow-md group active:scale-95 border border-white/5" data-sfx="applause" type="button">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">front_hand</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Applause</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">👏 Standing O</span>
+</button>
+<button class="sfx-btn p-space-md rounded-2xl bg-surface-container-high hover:bg-surface-variant transition-all text-center flex flex-col items-center justify-center gap-space-xxs shadow-md group active:scale-95 border border-white/5" data-sfx="chime" type="button">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">notifications_active</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sweet Chime</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">✨ Starlight Ding</span>
+</button>
+<button class="sfx-btn p-space-md rounded-2xl bg-surface-container-high hover:bg-surface-variant transition-all text-center flex flex-col items-center justify-center gap-space-xxs shadow-md group active:scale-95 border border-white/5" data-sfx="confetti" type="button">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">flare</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Confetti Pop</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">🎉 Magic Burst</span>
+</button>
+</div>
+<!-- Live Audio Playback Banner Feedback -->
+<div class="p-space-xs rounded-xl bg-surface-container-low text-center font-label-sm text-label-sm text-primary flex items-center justify-center gap-1.5" id="sound-feedback-pill">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+<span id="sound-feedback-text">Tap any sound above for an instant birthday fanfare!</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 0. Confetti Cannon Canvas Engine
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      function triggerConfettiBlast() {
+        const colors = ['#ff85a1', '#ffd166', '#c993ff', '#ffb1c0', '#ffffff', '#48cae4'];
+        for (let i = 0; i < 140; i++) {
+          particles.push({
+            x: canvas.width / 2 + (Math.random() - 0.5) * 200,
+            y: canvas.height * 0.45,
+            vx: (Math.random() - 0.5) * 18,
+            vy: (Math.random() - 1.2) * 16,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rotation: Math.random() * 360,
+            rotSpeed: (Math.random() - 0.5) * 10,
+            alpha: 1,
+            gravity: 0.35
+          });
+        }
+      }
+
+      function updateConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += p.gravity;
+          p.rotation += p.rotSpeed;
+          p.alpha -= 0.008;
+
+          if (p.alpha <= 0 || p.y > canvas.height) {
+            particles.splice(i, 1);
+            continue;
+          }
+
+          ctx.save();
+          ctx.globalAlpha = Math.max(p.alpha, 0);
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.7);
+          ctx.restore();
+        }
+        requestAnimationFrame(updateConfetti);
+      }
+      updateConfetti();
+
+      // Confetti header button
+      const headerConfettiBtn = document.getElementById('header-confetti-btn');
+      if (headerConfettiBtn) {
+        headerConfettiBtn.addEventListener('click', () => {
+          triggerConfettiBlast();
+          triggerAudioChime(600);
+          setTimeout(() => triggerAudioChime(900), 80);
+        });
+      }
+
+      // 1. Live Countdown Timer to September 29th
+      const daysEl = document.getElementById('countdown-days');
+      const hoursEl = document.getElementById('countdown-hours');
+      const minsEl = document.getElementById('countdown-minutes');
+      const secsEl = document.getElementById('countdown-seconds');
+      const testConfettiBtn = document.getElementById('test-confetti-btn');
+      const surpriseModal = document.getElementById('birthday-surprise-modal');
+      const modalCloseBtn = document.getElementById('modal-close-btn');
+      const modalReplayBtn = document.getElementById('modal-replay-music-btn');
+
+      let hasCelebrated = false;
+
+      function updateCountdown() {
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        let targetDate = new Date(currentYear, 8, 29, 0, 0, 0); // Sept is month 8 (0-indexed)
+
+        // If today is past Sept 29th this year, target next year's Sept 29th
+        if (now > targetDate) {
+          targetDate = new Date(currentYear + 1, 8, 29, 0, 0, 0);
+        }
+
+        const diff = targetDate - now;
+
+        if (diff <= 0 && !hasCelebrated) {
+          hasCelebrated = true;
+          triggerConfettiBlast();
+          if (surpriseModal) surpriseModal.classList.remove('hidden');
+          playBirthdayMelody();
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / 1000 / 60) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minsEl) minsEl.textContent = String(mins).padStart(2, '0');
+        if (secsEl) secsEl.textContent = String(secs).padStart(2, '0');
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
+      function openSurpriseModal() {
+        triggerConfettiBlast();
+        triggerConfettiBlast();
+        if (surpriseModal) surpriseModal.classList.remove('hidden');
+        playBirthdayMelody();
+      }
+
+      if (testConfettiBtn) {
+        testConfettiBtn.addEventListener('click', openSurpriseModal);
+      }
+
+      if (modalCloseBtn && surpriseModal) {
+        modalCloseBtn.addEventListener('click', () => {
+          surpriseModal.classList.add('hidden');
+        });
+      }
+
+      if (modalReplayBtn) {
+        modalReplayBtn.addEventListener('click', () => {
+          playBirthdayMelody();
+          triggerConfettiBlast();
+        });
+      }
+
+      // 2. Synthesized Web Audio Birthday Melody Player
+      let audioCtx = null;
+      function getAudioContext() {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        return audioCtx;
+      }
+
+      function triggerAudioChime(freq, duration = 0.5, type = 'sine') {
+        try {
+          const ctx = getAudioContext();
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          gain.gain.setValueAtTime(0.25, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + duration);
+        } catch (e) {}
+      }
+
+      // Happy Birthday Melody Notes & Beats
+      // C4: 261.63, D4: 293.66, E4: 329.63, F4: 349.23, G4: 392.00, A4: 440.00, Bb4: 466.16, C5: 523.25
+      const bdaySongNotes = [
+        { freq: 261.63, dur: 0.35, delay: 0 },
+        { freq: 261.63, dur: 0.35, delay: 0.4 },
+        { freq: 293.66, dur: 0.6, delay: 0.8 },
+        { freq: 261.63, dur: 0.6, delay: 1.5 },
+        { freq: 349.23, dur: 0.6, delay: 2.2 },
+        { freq: 329.63, dur: 1.1, delay: 2.9 },
+        // Happy Birthday to you...
+        { freq: 261.63, dur: 0.35, delay: 4.1 },
+        { freq: 261.63, dur: 0.35, delay: 4.5 },
+        { freq: 293.66, dur: 0.6, delay: 4.9 },
+        { freq: 261.63, dur: 0.6, delay: 5.6 },
+        { freq: 392.00, dur: 0.6, delay: 6.3 },
+        { freq: 349.23, dur: 1.1, delay: 7.0 },
+        // Happy Birthday dear [Darling]...
+        { freq: 261.63, dur: 0.35, delay: 8.2 },
+        { freq: 261.63, dur: 0.35, delay: 8.6 },
+        { freq: 523.25, dur: 0.6, delay: 9.0 },
+        { freq: 440.00, dur: 0.6, delay: 9.7 },
+        { freq: 349.23, dur: 0.6, delay: 10.4 },
+        { freq: 329.63, dur: 0.6, delay: 11.1 },
+        { freq: 293.66, dur: 0.8, delay: 11.8 },
+        // Happy Birthday to you!
+        { freq: 466.16, dur: 0.35, delay: 12.8 },
+        { freq: 466.16, dur: 0.35, delay: 13.2 },
+        { freq: 440.00, dur: 0.6, delay: 13.6 },
+        { freq: 349.23, dur: 0.6, delay: 14.3 },
+        { freq: 392.00, dur: 0.6, delay: 15.0 },
+        { freq: 349.23, dur: 1.3, delay: 15.7 }
+      ];
+
+      let isMusicPlaying = false;
+      let songTimeoutIds = [];
+
+      const musicToggleBtn = document.getElementById('music-toggle-btn');
+      const bannerMusicBtn = document.getElementById('banner-music-btn');
+      const musicBtnText = document.getElementById('music-btn-text');
+      const musicBtnIcon = document.getElementById('music-btn-icon');
+      const bannerPlayIcon = document.getElementById('banner-play-icon');
+      const bannerMusicLabel = document.getElementById('banner-music-label');
+      const audioStatusPill = document.getElementById('audio-status-pill');
+      const headerSoundwave = document.getElementById('header-soundwave');
+
+      function setAudioUIState(playing) {
+        isMusicPlaying = playing;
+        if (playing) {
+          if (musicBtnText) musicBtnText.textContent = 'Pause 🎶';
+          if (musicBtnIcon) musicBtnIcon.textContent = 'pause';
+          if (bannerPlayIcon) bannerPlayIcon.textContent = 'pause';
+          if (bannerMusicLabel) bannerMusicLabel.textContent = 'Pause Melody';
+          if (audioStatusPill) {
+            audioStatusPill.textContent = 'Playing 💖';
+            audioStatusPill.className = 'text-[11px] px-2 py-0.2 rounded-full bg-primary/20 text-primary animate-pulse';
+          }
+          if (headerSoundwave) {
+            const bars = headerSoundwave.querySelectorAll('span');
+            bars.forEach(b => b.classList.add('animate-pulse'));
+          }
+        } else {
+          if (musicBtnText) musicBtnText.textContent = 'Play Song 🎶';
+          if (musicBtnIcon) musicBtnIcon.textContent = 'music_note';
+          if (bannerPlayIcon) bannerPlayIcon.textContent = 'play_arrow';
+          if (bannerMusicLabel) bannerMusicLabel.textContent = 'Play Melody';
+          if (audioStatusPill) {
+            audioStatusPill.textContent = 'Paused';
+            audioStatusPill.className = 'text-[11px] px-2 py-0.2 rounded-full bg-secondary/20 text-secondary';
+          }
+          if (headerSoundwave) {
+            const bars = headerSoundwave.querySelectorAll('span');
+            bars.forEach(b => b.classList.remove('animate-pulse'));
+          }
+        }
+      }
+
+      function stopBirthdayMelody() {
+        songTimeoutIds.forEach(id => clearTimeout(id));
+        songTimeoutIds = [];
+        setAudioUIState(false);
+      }
+
+      function playBirthdayMelody() {
+        stopBirthdayMelody();
+        setAudioUIState(true);
+        const ctx = getAudioContext();
+
+        bdaySongNotes.forEach(note => {
+          const tid = setTimeout(() => {
+            if (!isMusicPlaying) return;
+            // Play primary melody chime
+            triggerAudioChime(note.freq, note.dur, 'triangle');
+            // Play soft warm harmonic overtone
+            triggerAudioChime(note.freq * 1.5, note.dur * 0.8, 'sine');
+          }, note.delay * 1000);
+          songTimeoutIds.push(tid);
+        });
+
+        // Loop after song finishes (approx 17.5s)
+        const loopTid = setTimeout(() => {
+          if (isMusicPlaying) {
+            playBirthdayMelody();
+          }
+        }, 17500);
+        songTimeoutIds.push(loopTid);
+      }
+
+      function toggleMusic() {
+        if (isMusicPlaying) {
+          stopBirthdayMelody();
+        } else {
+          playBirthdayMelody();
+        }
+      }
+
+      if (musicToggleBtn) musicToggleBtn.addEventListener('click', toggleMusic);
+      if (bannerMusicBtn) bannerMusicBtn.addEventListener('click', toggleMusic);
+
+      // 3. Blow Out Candles Interaction
+      const blowBtn = document.getElementById('blow-candles-btn');
+      const candleBanner = document.getElementById('candle-extinguish-banner');
+      const bannerCloseBtn = document.getElementById('banner-close-btn');
+
+      if (blowBtn && candleBanner) {
+        blowBtn.addEventListener('click', () => {
+          candleBanner.classList.remove('hidden');
+          triggerConfettiBlast();
+          triggerAudioChime(523.25);
+          triggerAudioChime(659.25);
+          triggerAudioChime(783.99);
+        });
+      }
+
+      if (bannerCloseBtn && candleBanner) {
+        bannerCloseBtn.addEventListener('click', () => {
+          candleBanner.classList.add('hidden');
+        });
+      }
+
+      // 4. Mini-game Balloon Pop Logic
+      let score = 0;
+      let streak = 0;
+      let unlockedCount = 0;
+      const scoreEl = document.getElementById('game-score');
+      const streakEl = document.getElementById('game-streak');
+      const unlockedEl = document.getElementById('game-unlocked');
+      const grandRewardBtn = document.getElementById('grand-reward-btn');
+      const noteModal = document.getElementById('love-note-modal');
+      const noteText = document.getElementById('love-note-text');
+      const closeNoteBtn = document.getElementById('close-note-btn');
+      const balloons = document.querySelectorAll('.balloon-item');
+      const resetGameBtn = document.getElementById('reset-game-btn');
+
+      balloons.forEach((balloon) => {
+        balloon.addEventListener('click', () => {
+          if (balloon.dataset.popped === 'true') return;
+          
+          balloon.dataset.popped = 'true';
+          balloon.style.opacity = '0';
+          balloon.style.transform = 'scale(1.4)';
+          balloon.style.pointerEvents = 'none';
+
+          score += 100;
+          streak += 1;
+          unlockedCount += 1;
+
+          if (scoreEl) scoreEl.textContent = score;
+          if (streakEl) streakEl.textContent = `${streak}x`;
+          if (unlockedEl) unlockedEl.textContent = `${unlockedCount} / 5`;
+
+          // Sound effect
+          triggerAudioChime(440 + (unlockedCount * 80));
+
+          // Reveal Love Note
+          const message = balloon.getAttribute('data-note') || 'You make every day brighter!';
+          if (noteText) noteText.textContent = `"${message}"`;
+          if (noteModal) noteModal.classList.remove('hidden');
+
+          if (unlockedCount >= 5 && grandRewardBtn) {
+            grandRewardBtn.classList.remove('hidden');
+            triggerConfettiBlast();
+          }
+        });
+      });
+
+      if (closeNoteBtn && noteModal) {
+        closeNoteBtn.addEventListener('click', () => {
+          noteModal.classList.add('hidden');
+        });
+      }
+
+      if (resetGameBtn) {
+        resetGameBtn.addEventListener('click', () => {
+          balloons.forEach((b) => {
+            b.dataset.popped = 'false';
+            b.style.opacity = '1';
+            b.style.transform = 'scale(1)';
+            b.style.pointerEvents = 'auto';
+          });
+          score = 0;
+          streak = 0;
+          unlockedCount = 0;
+          if (scoreEl) scoreEl.textContent = '0';
+          if (streakEl) streakEl.textContent = '0x';
+          if (unlockedEl) unlockedEl.textContent = '0 / 5';
+          if (grandRewardBtn) grandRewardBtn.classList.add('hidden');
+        });
+      }
+
+      if (grandRewardBtn) {
+        grandRewardBtn.addEventListener('click', () => {
+          openSurpriseModal();
+        });
+      }
+
+      // 5. Memory Vault Flippable Cards
+      const memoryCards = document.querySelectorAll('.memory-card');
+      memoryCards.forEach((card) => {
+        card.addEventListener('click', () => {
+          const secret = card.querySelector('.memory-secret');
+          if (secret) {
+            secret.classList.toggle('hidden');
+          }
+        });
+      });
+
+      // 6. Birthday Wish Jar
+      const sendWishBtn = document.getElementById('send-wish-btn');
+      const wishInput = document.getElementById('wish-input');
+      const wishContainer = document.getElementById('stardust-container');
+      const savedWishText = document.getElementById('stardust-saved-wish');
+      const wishFeedback = document.getElementById('wish-feedback');
+
+      if (sendWishBtn && wishInput) {
+        sendWishBtn.addEventListener('click', () => {
+          const val = wishInput.value.trim();
+          if (!val) {
+            if (wishFeedback) wishFeedback.textContent = 'Please enter a wish first, sweetheart!';
+            return;
+          }
+          if (wishContainer && savedWishText) {
+            savedWishText.textContent = `"${val}"`;
+            wishContainer.classList.remove('hidden');
+          }
+          wishInput.value = '';
+          if (wishFeedback) wishFeedback.textContent = 'Your wish has been launched to the cosmos!';
+          triggerConfettiBlast();
+          triggerAudioChime(880);
+        });
+      }
+
+      // 7. Soundboard SFX Interactions
+      const sfxButtons = document.querySelectorAll('.sfx-btn');
+      const soundFeedbackText = document.getElementById('sound-feedback-text');
+
+      sfxButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const sfx = btn.getAttribute('data-sfx');
+          if (sfx === 'horn') {
+            triggerAudioChime(350);
+            setTimeout(() => triggerAudioChime(420), 100);
+            if (soundFeedbackText) soundFeedbackText.textContent = '🥳 Toot! Celebrating your birthday loud and proud!';
+          } else if (sfx === 'applause') {
+            triggerAudioChime(300);
+            triggerAudioChime(500);
+            if (soundFeedbackText) soundFeedbackText.textContent = '👏 Standing ovation for the sweetest girl in the world!';
+          } else if (sfx === 'chime') {
+            triggerAudioChime(800);
+            setTimeout(() => triggerAudioChime(1200), 150);
+            if (soundFeedbackText) soundFeedbackText.textContent = '✨ Sparkle chime! You are pure starlight!';
+          } else if (sfx === 'confetti') {
+            triggerConfettiBlast();
+            triggerAudioChime(600);
+            setTimeout(() => triggerAudioChime(900), 80);
+            if (soundFeedbackText) soundFeedbackText.textContent = '🎉 Confetti blast! September 29th is all yours!';
+          }
+        });
+      });
+    });
+  </script>
+</div></main><footer class="relative z-10 w-full bg-surface-container-lowest/90 backdrop-blur-xl mt-space-3xl py-space-2xl border-t border-white/5"><div class="max-w-[1140px] mx-auto px-gutter-desktop flex flex-col items-center justify-center text-center gap-space-md"><div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container/60 shadow-[0_0_24px_rgba(255,133,161,0.15)] border border-primary/20"><span class="material-symbols-outlined text-primary text-[18px]">favorite</span><span class="font-label-md text-label-md text-secondary tracking-widest uppercase">September 29 Milestone Celebration</span><span class="material-symbols-outlined text-primary text-[18px]">sparkles</span></div><p class="font-headline-sm text-headline-sm text-on-surface max-w-xl">Crafted with endless love for September 29th • Happy Birthday, My Love</p><div class="flex flex-wrap items-center justify-center gap-space-md text-on-surface-variant font-label-md text-label-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span> Starlit Memory Chamber</span><span>•</span><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">cake</span> Sweetest Wishes Forever</span><span>•</span><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">nights_stay</span> Written in the Stars</span></div><div class="text-on-surface-variant font-body-sm text-body-sm opacity-70 mt-space-xs">© September 29 • A Timeless Romantic Digital Keepsake</div></div></footer></body></html>

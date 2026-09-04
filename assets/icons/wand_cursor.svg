@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Wand stick -->
+  <line x1="6" y1="26" x2="22" y2="10" stroke="#f472b6" stroke-width="3" stroke-linecap="round"/>
+  <line x1="6" y1="26" x2="22" y2="10" stroke="#ffd166" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="6" cy="26" r="2.5" fill="#f43f5e"/>
+  <!-- Glowing wand tip star -->
+  <polygon points="24,4 25.5,8.5 30,10 25.5,11.5 24,16 22.5,11.5 18,10 22.5,8.5" fill="#ffffff" filter="drop-shadow(0 0 4px #ec4899)"/>
+  <circle cx="24" cy="10" r="1.5" fill="#ffec99"/>
+</svg>

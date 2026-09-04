@@ -1,0 +1,12 @@
+{
+  "name": "birthday-celebration",
+  "version": "1.0.0",
+  "description": "Interactive 3D Birthday Celebration Website for Princess Tanya",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

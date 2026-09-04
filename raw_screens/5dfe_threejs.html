@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_7 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_7" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_7');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js Magical Princess Birthday Scene for Tanya (Harry Potter + Princess Pink Magic)
+const container = document.getElementById('threejs-container') || document.body;
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x2a0826, 0.028);
+
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+camera.position.set(0, 2.2, 9.2);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+container.appendChild(renderer.domElement);
+
+// Lighting: Magical Fairy & Enchanted Harry Potter Golden Spells
+const ambientLight = new THREE.AmbientLight(0xffd5e5, 1.7);
+scene.add(ambientLight);
+
+const mainSpot = new THREE.SpotLight(0xff85a1, 4.2, 35, Math.PI / 3.8, 0.35);
+mainSpot.position.set(0, 10, 6);
+scene.add(mainSpot);
+
+const goldenSnitchLight = new THREE.PointLight(0xffd700, 4.0, 20);
+goldenSnitchLight.position.set(2, 3, 2);
+scene.add(goldenSnitchLight);
+
+const enchantedPinkLight = new THREE.PointLight(0xff2a85, 3.8, 25);
+enchantedPinkLight.position.set(-4, 2, 2);
+scene.add(enchantedPinkLight);
+
+// Master Group
+const masterGroup = new THREE.Group();
+scene.add(masterGroup);
+
+// Princess Royal Tiara / Crown Cake Topper + Grand Tiered Cake
+// Pedestal: Pearl White & Rose Gold Filigree
+const standMat = new THREE.MeshPhongMaterial({ color: 0xfff0f6, shininess: 120, specular: 0xffe6ee });
+const goldMat = new THREE.MeshPhongMaterial({ color: 0xf6c28b, shininess: 140, specular: 0xfff2a1 });
+const royalPinkMat = new THREE.MeshPhongMaterial({ color: 0xff6b97, shininess: 90, specular: 0xffd2e2 });
+const pastelFrostingMat = new THREE.MeshPhongMaterial({ color: 0xffe0eb, shininess: 85, specular: 0xffffff });
+const shimmerPinkMat = new THREE.MeshPhongMaterial({ color: 0xff99bb, shininess: 100, specular: 0xffe1ec });
+
+// Ornate Stand
+const standBase = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.9, 0.2, 48), standMat);
+standBase.position.y = -1.6;
+masterGroup.add(standBase);
+
+const standPole = new THREE.Mesh(new THREE.CylinderGeometry(0.85, 1.2, 0.65, 32), goldMat);
+standPole.position.y = -1.95;
+masterGroup.add(standPole);
+
+// Tier 1 (Grand Base Tier - Soft Princess Blush Pink with Gold Swirls)
+const tier1 = new THREE.Mesh(new THREE.CylinderGeometry(2.4, 2.4, 0.95, 48), pastelFrostingMat);
+tier1.position.y = -1.05;
+masterGroup.add(tier1);
+
+const rim1 = new THREE.Mesh(new THREE.TorusGeometry(2.42, 0.11, 16, 48), goldMat);
+rim1.rotation.x = Math.PI / 2;
+rim1.position.y = -1.5;
+masterGroup.add(rim1);
+
+// Tier 2 (Royal Rose Pink with Harry Potter Golden Star motifs)
+const tier2 = new THREE.Mesh(new THREE.CylinderGeometry(1.8, 1.8, 0.85, 48), royalPinkMat);
+tier2.position.y = -0.15;
+masterGroup.add(tier2);
+
+const rim2 = new THREE.Mesh(new THREE.TorusGeometry(1.82, 0.09, 16, 48), goldMat);
+rim2.rotation.x = Math.PI / 2;
+rim2.position.y = -0.58;
+masterGroup.add(rim2);
+
+// Tier 3 (Princess Champagne Tier)
+const tier3 = new THREE.Mesh(new THREE.CylinderGeometry(1.2, 1.2, 0.8, 48), shimmerPinkMat);
+tier3.position.y = 0.68;
+masterGroup.add(tier3);
+
+const rim3 = new THREE.Mesh(new THREE.TorusGeometry(1.22, 0.08, 16, 48), goldMat);
+rim3.rotation.x = Math.PI / 2;
+rim3.position.y = 0.28;
+masterGroup.add(rim3);
+
+// Princess Pearls around Tier 1 and 2
+const pearlGeo = new THREE.SphereGeometry(0.1, 16, 16);
+const pearlMat = new THREE.MeshPhongMaterial({ color: 0xffffff, shininess: 150, specular: 0xffe4e6 });
+
+for (let i = 0; i < 20; i++) {
+  const ang = (i / 20) * Math.PI * 2;
+  const p = new THREE.Mesh(pearlGeo, pearlMat);
+  p.position.set(Math.cos(ang) * 2.2, -0.6, Math.sin(ang) * 2.2);
+  masterGroup.add(p);
+}
+
+// Royal Princess Tiara / Crown & Harry Potter Wand Topper
+const crownGroup = new THREE.Group();
+crownGroup.position.set(0, 1.35, 0);
+
+// Crown Base Ring
+const crownRing = new THREE.Mesh(new THREE.TorusGeometry(0.55, 0.06, 16, 32), goldMat);
+crownRing.rotation.x = Math.PI / 2;
+crownGroup.add(crownRing);
+
+// Crown Spikes with Pink Gems
+const spikeGeo = new THREE.ConeGeometry(0.09, 0.38, 16);
+const rubyGeo = new THREE.SphereGeometry(0.08, 16, 16);
+const rubyMat = new THREE.MeshPhongMaterial({ color: 0xff1493, shininess: 160, specular: 0xffffff });
+
+for (let i = 0; i < 7; i++) {
+  const angle = (i / 7) * Math.PI * 2;
+  const spike = new THREE.Mesh(spikeGeo, goldMat);
+  spike.position.set(Math.cos(angle) * 0.52, 0.2, Math.sin(angle) * 0.52);
+  spike.rotation.y = -angle;
+  spike.rotation.z = -0.15;
+  crownGroup.add(spike);
+
+  const gem = new THREE.Mesh(rubyGeo, rubyMat);
+  gem.position.set(Math.cos(angle) * 0.53, 0.42, Math.sin(angle) * 0.53);
+  crownGroup.add(gem);
+}
+
+// Center Sparkling Gem for Princess Tanya
+const centerGemGeo = new THREE.OctahedronGeometry(0.18, 0);
+const centerGem = new THREE.Mesh(centerGemGeo, rubyMat);
+centerGem.position.set(0, 0.28, 0.54);
+crownGroup.add(centerGem);
+
+masterGroup.add(crownGroup);
+
+// Harry Potter Magic Wand resting elegantly beside cake
+const wandGroup = new THREE.Group();
+const wandHandle = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.05, 0.6, 16), goldMat);
+const wandShaft = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.035, 1.4, 16), standMat);
+wandHandle.position.y = -0.7;
+wandShaft.position.y = 0.3;
+wandGroup.add(wandHandle);
+wandGroup.add(wandShaft);
+wandGroup.rotation.z = -0.55;
+wandGroup.rotation.x = 0.25;
+wandGroup.position.set(1.7, 0.5, 1.2);
+masterGroup.add(wandGroup);
+
+// Wand Tip Sparkle (Lumos spell)
+const wandTipLight = new THREE.PointLight(0xffe699, 2.5, 6);
+wandTipLight.position.set(1.7 + Math.sin(0.55) * 1.0, 1.5, 1.2);
+masterGroup.add(wandTipLight);
+
+// Golden Snitch flying around the cake! (Harry Potter tribute)
+const snitchGroup = new THREE.Group();
+const snitchBodyMat = new THREE.MeshPhongMaterial({ color: 0xffd700, shininess: 180, specular: 0xffffff });
+const snitchBody = new THREE.Mesh(new THREE.SphereGeometry(0.24, 24, 24), snitchBodyMat);
+snitchGroup.add(snitchBody);
+
+// Snitch Feathered Wings
+const wingMat = new THREE.MeshPhongMaterial({ color: 0xfff8dc, transparent: true, opacity: 0.85, side: THREE.DoubleSide });
+const wingGeo = new THREE.PlaneGeometry(0.65, 0.22);
+const leftWing = new THREE.Mesh(wingGeo, wingMat);
+leftWing.position.set(-0.42, 0.1, 0);
+leftWing.rotation.y = 0.4;
+snitchGroup.add(leftWing);
+
+const rightWing = new THREE.Mesh(wingGeo, wingMat);
+rightWing.position.set(0.42, 0.1, 0);
+rightWing.rotation.y = -0.4;
+snitchGroup.add(rightWing);
+
+scene.add(snitchGroup);
+
+// 7 Flickering Rose & Gold Birthday Candles
+const candleGeo = new THREE.CylinderGeometry(0.045, 0.045, 0.46, 16);
+const candleMat = new THREE.MeshPhongMaterial({ color: 0xfff5f8, shininess: 80 });
+const flameGeo = new THREE.ConeGeometry(0.065, 0.22, 16);
+const flameMat = new THREE.MeshBasicMaterial({ color: 0xff8500 });
+const innerFlameGeo = new THREE.ConeGeometry(0.038, 0.15, 16);
+const innerFlameMat = new THREE.MeshBasicMaterial({ color: 0xfffd82 });
+
+const candlePositions = [
+  [-0.7, 1.12, -0.3],
+  [0.7, 1.12, -0.3],
+  [0.0, 1.12, 0.72],
+  [-0.55, 1.12, 0.45],
+  [0.55, 1.12, 0.45],
+  [-0.32, 1.12, -0.62],
+  [0.32, 1.12, -0.62]
+];
+
+const flames = [];
+candlePositions.forEach((pos) => {
+  const candle = new THREE.Mesh(candleGeo, candleMat);
+  candle.position.set(pos[0], pos[1], pos[2]);
+  masterGroup.add(candle);
+
+  const flameGrp = new THREE.Group();
+  flameGrp.position.set(pos[0], pos[1] + 0.32, pos[2]);
+
+  const outFlame = new THREE.Mesh(flameGeo, flameMat);
+  flameGrp.add(outFlame);
+
+  const inFlame = new THREE.Mesh(innerFlameGeo, innerFlameMat);
+  inFlame.position.y = 0.02;
+  flameGrp.add(inFlame);
+
+  masterGroup.add(flameGrp);
+  flames.push(flameGrp);
+});
+
+// Starlight Fairy Magic Particles ("Expecto Patronum" glitter ribbon)
+const pCount = 350;
+const pGeo = new THREE.BufferGeometry();
+const pPos = new Float32Array(pCount * 3);
+const pColors = new Float32Array(pCount * 3);
+
+const magicPalette = [
+  new THREE.Color(0xff85a1),
+  new THREE.Color(0xffd700),
+  new THREE.Color(0xffcbf2),
+  new THREE.Color(0xffffff),
+  new THREE.Color(0xf72585)
+];
+
+for (let i = 0; i < pCount; i++) {
+  pPos[i * 3] = (Math.random() - 0.5) * 15;
+  pPos[i * 3 + 1] = (Math.random() - 0.5) * 10;
+  pPos[i * 3 + 2] = (Math.random() - 0.5) * 12;
+
+  const col = magicPalette[Math.floor(Math.random() * magicPalette.length)];
+  pColors[i * 3] = col.r;
+  pColors[i * 3 + 1] = col.g;
+  pColors[i * 3 + 2] = col.b;
+}
+
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+pGeo.setAttribute('color', new THREE.BufferAttribute(pColors, 3));
+
+const pMat = new THREE.PointsMaterial({
+  size: 0.17,
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.95,
+  blending: THREE.AdditiveBlending
+});
+const magicStars = new THREE.Points(pGeo, pMat);
+scene.add(magicStars);
+
+// Floating Princess Pink Pastel Balloons
+const balloonColors = [0xff70a6, 0xff9ebb, 0xffc2d1, 0xffd700, 0xf72585, 0xffb3c6];
+const balloons = [];
+const balloonGeo = new THREE.SphereGeometry(0.68, 32, 24);
+balloonGeo.scale(1, 1.3, 1);
+
+for (let i = 0; i < 16; i++) {
+  const bMat = new THREE.MeshPhongMaterial({
+    color: balloonColors[i % balloonColors.length],
+    shininess: 110,
+    specular: 0xffffff,
+    transparent: true,
+    opacity: 0.92
+  });
+  const balloon = new THREE.Mesh(balloonGeo, bMat);
+  const ang = (i / 16) * Math.PI * 2 + Math.random() * 0.3;
+  const rad = 3.8 + Math.random() * 2.8;
+  const y = -1.2 + Math.random() * 5.5;
+
+  balloon.position.set(Math.cos(ang) * rad, y, Math.sin(ang) * rad);
+  balloon.userData = {
+    speed: 0.006 + Math.random() * 0.01,
+    offset: Math.random() * 12,
+    drift: 0.005 + Math.random() * 0.006
+  };
+  scene.add(balloon);
+  balloons.push(balloon);
+}
+
+// Mouse tracking & spin
+let mouseX = 0;
+let mouseY = 0;
+let spinBoost = 0;
+
+window.addEventListener('mousemove', (e) => {
+  mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+  mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+});
+
+window.addEventListener('click', () => {
+  spinBoost = 0.38; // Royal celebratory spin burst
+});
+
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+// Render Loop
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const time = clock.getElapsedTime();
+
+  // Smooth Cake motion
+  const targetRotY = mouseX * 0.52;
+  const targetRotX = mouseY * 0.22;
+  masterGroup.rotation.y += (targetRotY - masterGroup.rotation.y) * 0.05 + 0.009 + spinBoost;
+  masterGroup.rotation.x += (targetRotX - masterGroup.rotation.x) * 0.05;
+  masterGroup.position.y = Math.sin(time * 1.5) * 0.15;
+
+  if (spinBoost > 0) {
+    spinBoost *= 0.94;
+    if (spinBoost < 0.001) spinBoost = 0;
+  }
+
+  // Crown pulse
+  crownGroup.rotation.y = Math.sin(time * 2.2) * 0.2;
+
+  // Snitch Flight Orbit around Princess Cake (Harry Potter charm!)
+  const snitchOrbitRad = 3.3;
+  const snitchAng = time * 1.8;
+  snitchGroup.position.set(
+    Math.cos(snitchAng) * snitchOrbitRad,
+    0.8 + Math.sin(time * 3.2) * 1.2,
+    Math.sin(snitchAng) * snitchOrbitRad
+  );
+  snitchGroup.rotation.y = -snitchAng - Math.PI / 2;
+  leftWing.rotation.z = Math.sin(time * 35) * 0.6;
+  rightWing.rotation.z = -Math.sin(time * 35) * 0.6;
+  goldenSnitchLight.position.copy(snitchGroup.position);
+
+  // Candle Flames flicker
+  flames.forEach((flame, idx) => {
+    const s = 1.0 + Math.sin(time * 15 + idx * 2.4) * 0.22;
+    flame.scale.set(s, s * 1.18, s);
+  });
+
+  // Floating Balloons
+  balloons.forEach((b) => {
+    b.position.y += Math.sin(time * 2.0 + b.userData.offset) * 0.005;
+    b.rotation.y += b.userData.drift;
+    b.rotation.z = Math.sin(time * 1.3 + b.userData.offset) * 0.05;
+  });
+
+  // Magic starlight drift
+  magicStars.rotation.y = time * 0.07;
+  magicStars.rotation.x = Math.sin(time * 0.06) * 0.15;
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_7 -->
+</body>
+</html>

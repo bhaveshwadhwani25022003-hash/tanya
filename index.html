@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Happy Birthday Princess Tanya ✨👑 Hogwarts &amp; Fairy Tale Celebration</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS & Three.js -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "pink-primary": "#f472b6",
+            "pink-glow": "#ff85a1",
+            "pink-accent": "#fb7185",
+            "pink-dark": "#180216",
+            "pink-card": "rgba(42, 6, 37, 0.65)",
+            "pink-border": "rgba(244, 114, 182, 0.25)"
+          },
+          fontFamily: {
+            "serif": ["'Playfair Display'", "serif"],
+            "sans": ["'Plus Jakarta Sans'", "sans-serif"],
+            "script": ["'Caveat'", "cursive"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom Magic Wand Cursor */
+    * {
+      cursor: url('assets/icons/wand_cursor.svg') 6 6, auto !important;
+    }
+    
+    body {
+      background-color: #170215;
+      background-image: 
+        radial-gradient(circle at 50% 15%, rgba(244, 114, 182, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 85% 65%, rgba(251, 113, 133, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 15% 85%, rgba(192, 132, 252, 0.1) 0%, transparent 50%);
+      color: #fff0f6;
+      overflow-x: hidden;
+    }
+
+    /* Glassmorphism Styles */
+    .glass-card {
+      background: rgba(45, 7, 39, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(244, 114, 182, 0.22);
+    }
+    .glass-card:hover {
+      border-color: rgba(244, 114, 182, 0.45);
+      box-shadow: 0 12px 35px rgba(236, 72, 153, 0.2);
+    }
+
+    .polaroid {
+      background: rgba(255, 240, 246, 0.07);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(244, 114, 182, 0.3);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .polaroid:hover {
+      transform: translateY(-8px) rotate(0deg) scale(1.02);
+      border-color: rgba(244, 114, 182, 0.7);
+      box-shadow: 0 20px 40px rgba(236, 72, 153, 0.35);
+    }
+
+    @keyframes floatGentle {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1deg); }
+    }
+    .animate-float {
+      animation: floatGentle 5s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { filter: drop-shadow(0 0 12px rgba(244, 114, 182, 0.4)); }
+      50% { filter: drop-shadow(0 0 24px rgba(244, 114, 182, 0.8)); }
+    }
+    .animate-glow {
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-pink-500 selection:text-white">
+
+  <!-- Full-Screen Confetti & Trail Canvases -->
+  <canvas id="confettiCanvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
+  <canvas id="trailCanvas" class="fixed inset-0 pointer-events-none z-40"></canvas>
+
+  <!-- ============================================================ -->
+  <!-- 1. MODERN FLOATING GLASS NAVIGATION BAR -->
+  <!-- ============================================================ -->
+  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-[94%] max-w-6xl">
+    <div class="glass-card rounded-full px-5 py-2.5 flex items-center justify-between shadow-[0_10px_35px_rgba(0,0,0,0.5)]">
+      
+      <!-- Brand -->
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <span class="text-2xl group-hover:scale-110 transition-transform">👑</span>
+        <div class="flex flex-col">
+          <span class="font-serif font-bold text-base text-white leading-tight">Princess Tanya <span class="text-pink-400">✨</span></span>
+          <span class="text-[10px] text-pink-300/70 uppercase tracking-widest font-semibold">Sept 29 • Jubilee</span>
+        </div>
+      </a>
+
+      <!-- Center Links -->
+      <nav class="hidden lg:flex items-center gap-6">
+        <a href="our_story.html" class="text-pink-200/90 hover:text-white font-medium text-xs tracking-wider flex items-center gap-1.5 transition-colors group">
+          <span class="material-symbols-outlined text-sm text-pink-400 group-hover:rotate-12 transition-transform">auto_stories</span>
+          <span>Our Story</span>
+        </a>
+        <a href="#memories" class="text-pink-200/90 hover:text-white font-medium text-xs tracking-wider transition-colors">Memories</a>
+        <a href="#games-arcade" class="text-pink-200/90 hover:text-white font-medium text-xs tracking-wider transition-colors">Codex Games</a>
+        <a href="#wishjar" class="text-pink-200/90 hover:text-white font-medium text-xs tracking-wider transition-colors">Wish Jar</a>
+        <a href="#bucketlist" class="text-pink-200/90 hover:text-white font-medium text-xs tracking-wider transition-colors">Bucket List</a>
+      </nav>
+
+      <!-- Action Buttons (Unique & Modern) -->
+      <div class="flex items-center gap-2">
+        <!-- Confetti Cannon Button -->
+        <button onclick="triggerConfetti()" title="Launch Confetti" class="p-2 sm:px-3 sm:py-1.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 text-white font-bold text-xs flex items-center gap-1 shadow-[0_0_15px_rgba(244,114,182,0.4)] hover:brightness-110 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-base">celebration</span>
+          <span class="hidden sm:inline">Confetti</span>
+        </button>
+
+        <!-- Surprise Gift Box Button (Distinct from Love Letter) -->
+        <button onclick="toggleSurpriseModal()" title="Open Birthday Surprise" class="p-2 sm:px-3 sm:py-1.5 rounded-full bg-pink-950/70 border border-pink-400/40 text-pink-200 font-bold text-xs flex items-center gap-1 hover:bg-pink-900/80 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-base text-pink-300">featured_seasonal_and_gifts</span>
+          <span class="hidden sm:inline">Surprise 🎁</span>
+        </button>
+
+        <!-- Starlight Aura Toggle (Replaces redundant SVG button) -->
+        <button id="auraToggleBtn" onclick="toggleStarlightAura()" title="Toggle Fairy Dust Aura" class="p-2 rounded-full bg-pink-950/70 border border-pink-400/30 text-pink-300 hover:text-white hover:bg-pink-900/70 transition-all">
+          <span class="material-symbols-outlined text-base">auto_awesome</span>
+        </button>
+
+        <!-- Birthday Song Melody Toggle -->
+        <button id="musicToggleBtn" onclick="toggleBirthdayMusic()" title="Play Birthday Melody" class="px-2.5 py-1.5 rounded-full bg-pink-950/70 border border-pink-400/30 text-pink-300 hover:text-white flex items-center gap-1.5 transition-all">
+          <span class="material-symbols-outlined text-base">music_note</span>
+          <div class="flex items-end gap-0.5 h-3">
+            <span class="w-0.5 h-2 bg-pink-400 rounded-full animate-pulse"></span>
+            <span class="w-0.5 h-3 bg-pink-300 rounded-full animate-pulse"></span>
+            <span class="w-0.5 h-1.5 bg-pink-400 rounded-full animate-pulse"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- 2. MODERN 3D HERO SECTION -->
+  <!-- ============================================================ -->
+  <section id="hero" class="relative min-h-[640px] lg:min-h-[720px] flex items-center justify-center overflow-hidden pt-28 pb-16 px-6">
+    
+    <!-- Clean Three.js Canvas Container -->
+    <div id="threejs-hero-container" class="absolute inset-0 w-full h-full z-0 pointer-events-auto"></div>
+
+    <!-- Soft Rose-Glow Vignette Overlays -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#170215] via-transparent to-transparent pointer-events-none z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#170215]/60 via-transparent to-[#170215]/80 pointer-events-none z-10"></div>
+
+    <!-- Hero Content Overlay -->
+    <div class="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center pointer-events-none">
+      
+      <!-- Royal Badge -->
+      <div class="pointer-events-auto inline-flex items-center gap-2 px-4 py-1 rounded-full bg-pink-950/80 border border-pink-400/40 text-pink-200 text-xs font-semibold uppercase tracking-wider mb-4 shadow-[0_0_20px_rgba(244,114,182,0.35)] animate-float">
+        <span class="text-amber-300">✨</span>
+        <span class="text-pink-200">Gryffindor Princess • September 29th Royal Ball</span>
+        <span class="text-amber-300">✨</span>
+      </div>
+
+      <!-- Main Header -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold leading-tight text-white mb-4 drop-shadow-[0_4px_25px_rgba(236,72,153,0.5)]">
+        Happy Birthday to <br/>
+        <span class="bg-gradient-to-r from-pink-300 via-rose-300 to-amber-200 bg-clip-text text-transparent italic">
+          Princess Tanya ✨👑
+        </span>
+      </h1>
+
+      <p class="text-pink-100/90 text-sm sm:text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed mb-6 drop-shadow-md">
+        To the most magical, courageous, and beautiful girl in all the realms. Today, the stars align just for you.
+      </p>
+
+      <!-- Candle Extinguish Celebration Banner (Revealed on Blow Out) -->
+      <div id="candleBanner" class="pointer-events-auto hidden mb-6 w-full max-w-lg mx-auto p-4 rounded-2xl bg-gradient-to-r from-pink-900/95 via-purple-900/95 to-pink-900/95 border border-pink-400/60 shadow-[0_0_30px_rgba(244,114,182,0.5)] backdrop-blur-xl animate-bounce">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3 text-left">
+            <span class="text-3xl">🕯️💫</span>
+            <div>
+              <h4 class="text-sm font-bold text-white font-serif">The Candles Are Blown Out!</h4>
+              <p class="text-xs text-pink-200">May every birthday dream come true for Princess Tanya! 💖</p>
+            </div>
+          </div>
+          <button onclick="relightPrincessCandles()" class="px-3.5 py-1.5 rounded-xl bg-pink-500 hover:bg-pink-400 text-white text-xs font-bold shadow transition-all">
+            Relight ✨
+          </button>
+        </div>
+      </div>
+
+      <!-- Unique Hero Action Buttons -->
+      <div class="pointer-events-auto flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        
+        <!-- Button 1: Blow Out Candles on 3D Cake -->
+        <button id="heroBlowCandlesBtn" onclick="blowOutPrincessCandles()" class="flex items-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-500 to-pink-600 hover:from-amber-400 hover:to-pink-500 text-white font-bold text-sm shadow-[0_4px_20px_rgba(245,158,11,0.4)] transition-all transform hover:scale-105 active:scale-95">
+          <span class="material-symbols-outlined text-lg">local_fire_department</span>
+          <span>Make a Wish &amp; Blow Candles 🕯️</span>
+        </button>
+
+        <!-- Button 2: Read Royal Love Letter -->
+        <button onclick="toggleLoveLetterModal()" class="flex items-center gap-2 px-5 py-3 rounded-2xl bg-pink-950/80 hover:bg-pink-900/90 border border-pink-400/40 text-pink-200 font-bold text-sm shadow-md transition-all transform hover:scale-105 active:scale-95">
+          <span class="material-symbols-outlined text-lg text-pink-400">favorite</span>
+          <span>Read Love Letter 💌</span>
+        </button>
+
+        <!-- Button 3: Unwrap Birthday Surprise -->
+        <button onclick="toggleSurpriseModal()" class="flex items-center gap-2 px-5 py-3 rounded-2xl bg-pink-900/40 hover:bg-pink-900/70 border border-pink-400/30 text-pink-200 font-bold text-sm shadow-md transition-all transform hover:scale-105 active:scale-95">
+          <span class="material-symbols-outlined text-lg text-amber-300">redeem</span>
+          <span>Unwrap Surprise 🎁</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- LIVE COUNTDOWN TO SEPTEMBER 29th -->
+  <!-- ============================================================ -->
+  <section class="max-w-4xl mx-auto px-6 -mt-8 relative z-20">
+    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-950/70 text-pink-300 text-xs font-semibold uppercase tracking-wider mb-2 border border-pink-400/30">
+            <span class="w-2 h-2 rounded-full bg-pink-400 animate-ping"></span>
+            <span>Live Milestone Clock</span>
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-white">⏳ Countdown to Tanya's Magical Day</h3>
+          <p class="text-pink-100/70 text-xs sm:text-sm mt-1">Celebrating September 29th across every heartbeat.</p>
+        </div>
+        
+        <!-- 4 Digits Grid -->
+        <div class="flex items-center gap-3">
+          <div class="flex flex-col items-center justify-center w-16 sm:w-20 h-18 sm:h-22 rounded-2xl bg-pink-950/80 border border-pink-400/30 shadow-inner p-2">
+            <span id="cd-days" class="text-2xl sm:text-3xl font-bold font-serif text-white">00</span>
+            <span class="text-[10px] text-pink-300 uppercase tracking-widest font-semibold mt-1">Days</span>
+          </div>
+          <span class="text-pink-400 font-bold text-xl">:</span>
+          <div class="flex flex-col items-center justify-center w-16 sm:w-20 h-18 sm:h-22 rounded-2xl bg-pink-950/80 border border-pink-400/30 shadow-inner p-2">
+            <span id="cd-hours" class="text-2xl sm:text-3xl font-bold font-serif text-white">00</span>
+            <span class="text-[10px] text-pink-300 uppercase tracking-widest font-semibold mt-1">Hours</span>
+          </div>
+          <span class="text-pink-400 font-bold text-xl">:</span>
+          <div class="flex flex-col items-center justify-center w-16 sm:w-20 h-18 sm:h-22 rounded-2xl bg-pink-950/80 border border-pink-400/30 shadow-inner p-2">
+            <span id="cd-minutes" class="text-2xl sm:text-3xl font-bold font-serif text-white">00</span>
+            <span class="text-[10px] text-pink-300 uppercase tracking-widest font-semibold mt-1">Mins</span>
+          </div>
+          <span class="text-pink-400 font-bold text-xl">:</span>
+          <div class="flex flex-col items-center justify-center w-16 sm:w-20 h-18 sm:h-22 rounded-2xl bg-pink-950/80 border border-pink-400/30 shadow-inner p-2">
+            <span id="cd-seconds" class="text-2xl sm:text-3xl font-bold font-serif text-pink-300">00</span>
+            <span class="text-[10px] text-pink-300 uppercase tracking-widest font-semibold mt-1">Secs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 4 & 5. THE TANYA & US SCRAPBOOK (12 PHOTOS) -->
+  <!-- ============================================================ -->
+    <!-- ============================================================ -->
+  <!-- 4 & 5. THE TANYA & US SCRAPBOOK (12 PHOTOS) -->
+  <!-- ============================================================ -->
+  <section id="memories" class="max-w-6xl mx-auto px-6 py-24">
+    
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 text-pink-300 text-xs font-bold uppercase tracking-widest mb-2">
+        <span class="material-symbols-outlined text-base">auto_stories</span>
+        <span>The Tanya &amp; Us Scrapbook</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white drop-shadow-[0_2px_15px_rgba(236,72,153,0.4)]">
+        Our Magical Memories 📸✨
+      </h2>
+      <p class="text-pink-100/80 text-sm mt-3 font-light leading-relaxed">
+        12 precious polaroids of laughs, sunsets, birthdays, and unforgettable nights. Click any photo to inspect memory notes.
+      </p>
+    </div>
+
+    <!-- 12 Polaroid Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('The Day We Met ☕', 'Autumn café memories where it all began. The moment our story started.', 'assets/images/photo_1.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_2.jpg" alt="Memory 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">The Day We Met ☕</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Autumn Café Memories</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Golden Hour Smiles 🌅', 'Golden rays hitting your radiant princess smile in the lavender meadow.', 'assets/images/photo_2.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_1.jpg" alt="Memory 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Golden Hour Smiles 🌅</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Pure Warmth</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Our Hogwarts Castle Date 🏰', 'Wands up, butterbeer in hand, and casting spells together under dusk.', 'assets/images/photo_3.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_3.jpg" alt="Memory 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Hogwarts Castle Date 🏰</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Gryffindor Magic</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Festive Nights Together ✨', 'All dolled up under the city lights, cheek to cheek and grinning like nothing else mattered.', 'assets/images/memory_4.JPG')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/memory_4.JPG" alt="Memory 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Festive Nights Together ✨</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Dressed Up & Dazzling</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Sunset by the Sea 🌅', 'The sun dipping into the ocean and that look you gave me right before the wave crashed.', 'assets/images/memory_8.jpeg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/memory_8.jpeg" alt="Memory 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Sunset by the Sea 🌅</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Golden Hour Love</span>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Beach Nights with Friends 🌊', 'Bare feet in the sand, thumbs up for the camera, and our favorite people cracking jokes into the night.', 'assets/images/memory_11.jpeg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/memory_11.jpeg" alt="Memory 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Beach Nights with Friends 🌊</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Laughing Till Late</span>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Birthday Girl Glow 🎂', 'Tiara on, cake in hand, and the softest smile looking down at your name in pink icing.', 'assets/images/photo_7.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_7.jpg" alt="Memory 7" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Birthday Girl Glow 🎂</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Making Wishes</span>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Twirls & Roses 🌹', 'Floral dress twirling, rose in hand, caught mid-laugh against the stripes.', 'assets/images/photo_8.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_8.jpg" alt="Memory 8" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Twirls & Roses 🌹</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Golden Hour Grace</span>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Just Being Silly 😜', 'No filter, no fancy outfit — just you being your goofy, gorgeous self on a random afternoon.', 'assets/images/photo_9.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_9.jpg" alt="Memory 9" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Just Being Silly 😜</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Peace Signs & Selfies</span>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Midnight Roadtrip 🌌', 'Windows rolled down, cold air, singing along to our playlist on repeat.', 'assets/images/photo_10.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_10.jpg" alt="Memory 10" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Midnight Roadtrip 🌌</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Endless Horizons</span>
+        </div>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Ready to Roll 🖤', 'Sunglasses pushed up, designer bag in hand, flashing that smile from the backseat.', 'assets/images/photo_11.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_11.jpg" alt="Memory 11" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Ready to Roll 🖤</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Little Black Dress</span>
+        </div>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="polaroid p-3 rounded-2xl group cursor-pointer" onclick="openPhotoModal('Concert Night Lights 🎶', 'Stage lights blazing behind you, the crowd roaring, and you glowing brighter than any spotlight.', 'assets/images/photo_12.jpg')">
+        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden mb-3 bg-pink-950/40">
+          <img src="assets/images/photo_12.jpg" alt="Memory 12" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <div class="text-center">
+          <h4 class="font-serif font-bold text-sm text-white">Concert Night Lights 🎶</h4>
+          <span class="text-[11px] text-pink-300/80 font-script text-base">Under the Stadium Lights</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ============================================================ -->
+  <!-- 6. PRINCESS TANYA'S ROYAL CODEX (3 INTERACTIVE MINI-GAMES) -->
+  <!-- ============================================================ -->
+  <section id="games-arcade" class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 text-pink-300 text-xs font-bold uppercase tracking-widest mb-2">
+        <span class="material-symbols-outlined text-base">sports_esports</span>
+        <span>Princess Tanya's Royal Codex Arcade</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white drop-shadow-[0_2px_15px_rgba(236,72,153,0.4)]">
+        Magical Mini-Games 🎮✨
+      </h2>
+      <p class="text-pink-100/80 text-sm mt-3 font-light">
+        Three games crafted just for Tanya! Note: The "Let Tanya Win 💕" spell is cast by default!
+      </p>
+    </div>
+
+    <!-- 3 Games Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- GAME 1: TIC TAC TOE (XO) -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-pink-300 flex items-center gap-1.5">
+              <span>👑 vs 🪄</span> Tic-Tac-Toe
+            </span>
+            <!-- Let Tanya Win Toggle -->
+            <label class="flex items-center gap-1.5 cursor-pointer" title="Ensure Tanya Always Wins">
+              <span class="text-[11px] text-pink-200 font-medium">Let Tanya Win 💕</span>
+              <input type="checkbox" id="ttt-tanya-win" checked class="rounded text-pink-500 focus:ring-pink-400 bg-pink-950/70 border-pink-400/40"/>
+            </label>
+          </div>
+
+          <div id="ttt-status" class="text-xs text-center py-1.5 px-3 rounded-full bg-pink-950/80 border border-pink-400/30 text-pink-200 mb-4 font-semibold">
+            Tanya's Turn (👑)
+          </div>
+
+          <!-- 3x3 Board -->
+          <div class="grid grid-cols-3 gap-2 max-w-[240px] mx-auto mb-4" id="ttt-board">
+            <button onclick="handleTTTClick(0)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+            <button onclick="handleTTTClick(1)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+            <button onclick="handleTTTClick(2)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+            <button onclick="handleTTTClick(3)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+            <button onclick="handleTTTClick(4)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+            <button onclick="handleTTTClick(5)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+            <button onclick="handleTTTClick(6)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+            <button onclick="handleTTTClick(7)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+            <button onclick="handleTTTClick(8)" class="ttt-cell h-18 sm:h-20 rounded-2xl bg-pink-950/60 border border-pink-400/30 text-2xl sm:text-3xl flex items-center justify-center hover:bg-pink-900/60 transition-all"></button>
+          </div>
+        </div>
+
+        <button onclick="resetTTT()" class="w-full py-2.5 rounded-xl bg-pink-950/70 hover:bg-pink-900 text-pink-200 border border-pink-400/30 text-xs font-bold transition-all">
+          Restart Game 🔄
+        </button>
+      </div>
+
+      <!-- GAME 2: MEMORY MATCH FLIP -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-pink-300 flex items-center gap-1.5">
+              <span>🃏</span> Royal Memory Match
+            </span>
+            <label class="flex items-center gap-1.5 cursor-pointer" title="Auto-match assistant">
+              <span class="text-[11px] text-pink-200 font-medium">Let Tanya Win 💕</span>
+              <input type="checkbox" id="match-tanya-win" checked class="rounded text-pink-500 focus:ring-pink-400 bg-pink-950/70 border-pink-400/40"/>
+            </label>
+          </div>
+
+          <div id="match-status" class="text-xs text-center py-1.5 px-3 rounded-full bg-pink-950/80 border border-pink-400/30 text-pink-200 mb-4 font-semibold">
+            Pairs Found: <span id="pairs-count">0</span> / 6
+          </div>
+
+          <!-- 4x3 Grid of 12 Cards -->
+          <div class="grid grid-cols-4 gap-2 max-w-[280px] mx-auto mb-4" id="match-board">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <button onclick="resetMemoryMatch()" class="w-full py-2.5 rounded-xl bg-pink-950/70 hover:bg-pink-900 text-pink-200 border border-pink-400/30 text-xs font-bold transition-all">
+          Shuffle &amp; Play Again 🔄
+        </button>
+      </div>
+
+      <!-- GAME 3: ROYAL FORTUNE WHEEL -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden text-center">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-pink-300 flex items-center gap-1.5">
+              <span>🎡</span> Royal Birthday Wheel
+            </span>
+            <label class="flex items-center gap-1.5 cursor-pointer" title="Guaranteed Jackpot">
+              <span class="text-[11px] text-pink-200 font-medium">Let Tanya Win 💕</span>
+              <input type="checkbox" id="wheel-tanya-win" checked class="rounded text-pink-500 focus:ring-pink-400 bg-pink-950/70 border-pink-400/40"/>
+            </label>
+          </div>
+
+          <div id="wheel-status" class="text-xs text-center py-1.5 px-3 rounded-full bg-pink-950/80 border border-pink-400/30 text-pink-200 mb-4 font-semibold">
+            Spin to Win Tanya's Birthday Reward!
+          </div>
+
+          <!-- Wheel Canvas -->
+          <div class="relative w-48 h-48 mx-auto mb-4 flex items-center justify-center">
+            <!-- Indicator Pin -->
+            <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[16px] border-t-amber-300 z-20 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"></div>
+            <canvas id="wheelCanvas" width="190" height="190" class="rounded-full shadow-[0_0_20px_rgba(244,114,182,0.4)] transition-transform duration-[3500ms] cubic-bezier(0.2, 0.8, 0.2, 1)"></canvas>
+          </div>
+        </div>
+
+        <button id="spinWheelBtn" onclick="spinRoyalWheel()" class="w-full py-3 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white font-bold text-xs shadow-[0_4px_16px_rgba(244,114,182,0.4)] hover:scale-102 active:scale-95 transition-all">
+          Spin The Wheel ✨
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 7. BALLOON POP PARTY & 7-SECOND 3D CAKE CELEBRATION -->
+  <!-- ============================================================ -->
+  <section id="games" class="max-w-5xl mx-auto px-6 py-20">
+    <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 text-pink-300 font-bold text-xs uppercase tracking-widest mb-1">
+            <span class="material-symbols-outlined text-base">celebration</span>
+            <span>Interactive Birthday Joy</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white">
+            Princess Tanya's Balloon Pop Party 🎈✨
+          </h2>
+          <p class="text-pink-100/80 text-sm mt-1">
+            Pop all 6 balloons to unveil secret love tokens and unlock the Grand 3D Cake Celebration!
+          </p>
+        </div>
+        
+        <div class="flex items-center gap-4 bg-pink-950/80 px-4 py-2 rounded-2xl border border-pink-400/30">
+          <div class="text-right">
+            <span class="text-[10px] text-pink-300 uppercase tracking-wider block">Balloons Popped</span>
+            <span class="text-xl font-bold text-white" id="popScore">0 / 6</span>
+          </div>
+          <button onclick="resetBalloons()" class="p-2 rounded-xl bg-pink-900/60 hover:bg-pink-800 text-pink-200 border border-pink-400/30 transition-all" title="Reset Balloons">
+            <span class="material-symbols-outlined text-sm">refresh</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Balloons Row -->
+      <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 py-6 text-center">
+        
+        <!-- Balloon 1 -->
+        <div class="balloon-item cursor-pointer flex flex-col items-center group transition-all duration-300" onclick="popBalloon(this, 'You have the kindest, most radiant heart in the universe! 💖')">
+          <div class="w-16 h-20 sm:w-20 sm:h-24 rounded-full bg-gradient-to-t from-pink-600 via-pink-400 to-pink-300 shadow-[0_10px_20px_rgba(236,72,153,0.4)] group-hover:scale-110 transition-transform flex items-center justify-center text-2xl relative">
+            🎈
+            <div class="absolute -bottom-2 w-1 h-3 bg-pink-400"></div>
+          </div>
+          <span class="text-xs text-pink-200 font-semibold mt-3">Blush</span>
+        </div>
+
+        <!-- Balloon 2 -->
+        <div class="balloon-item cursor-pointer flex flex-col items-center group transition-all duration-300" onclick="popBalloon(this, 'Every single second with you is my favorite second! 🌟')">
+          <div class="w-16 h-20 sm:w-20 sm:h-24 rounded-full bg-gradient-to-t from-amber-500 via-amber-300 to-amber-200 shadow-[0_10px_20px_rgba(245,158,11,0.4)] group-hover:scale-110 transition-transform flex items-center justify-center text-2xl relative">
+            🎈
+            <div class="absolute -bottom-2 w-1 h-3 bg-amber-400"></div>
+          </div>
+          <span class="text-xs text-amber-200 font-semibold mt-3">Gold</span>
+        </div>
+
+        <!-- Balloon 3 -->
+        <div class="balloon-item cursor-pointer flex flex-col items-center group transition-all duration-300" onclick="popBalloon(this, 'Your laugh is the sweetest song I will ever know! 🎶')">
+          <div class="w-16 h-20 sm:w-20 sm:h-24 rounded-full bg-gradient-to-t from-purple-600 via-purple-400 to-purple-300 shadow-[0_10px_20px_rgba(168,85,247,0.4)] group-hover:scale-110 transition-transform flex items-center justify-center text-2xl relative">
+            🎈
+            <div class="absolute -bottom-2 w-1 h-3 bg-purple-400"></div>
+          </div>
+          <span class="text-xs text-purple-200 font-semibold mt-3">Lavender</span>
+        </div>
+
+        <!-- Balloon 4 -->
+        <div class="balloon-item cursor-pointer flex flex-col items-center group transition-all duration-300" onclick="popBalloon(this, 'You make the most ordinary day feel like royalty! 👑')">
+          <div class="w-16 h-20 sm:w-20 sm:h-24 rounded-full bg-gradient-to-t from-rose-600 via-rose-400 to-rose-300 shadow-[0_10px_20px_rgba(244,63,94,0.4)] group-hover:scale-110 transition-transform flex items-center justify-center text-2xl relative">
+            🎈
+            <div class="absolute -bottom-2 w-1 h-3 bg-rose-400"></div>
+          </div>
+          <span class="text-xs text-rose-200 font-semibold mt-3">Rose</span>
+        </div>
+
+        <!-- Balloon 5 -->
+        <div class="balloon-item cursor-pointer flex flex-col items-center group transition-all duration-300" onclick="popBalloon(this, 'I promise to love you through all Hogwarts adventures! 🏰')">
+          <div class="w-16 h-20 sm:w-20 sm:h-24 rounded-full bg-gradient-to-t from-pink-500 via-rose-300 to-white shadow-[0_10px_20px_rgba(244,114,182,0.4)] group-hover:scale-110 transition-transform flex items-center justify-center text-2xl relative">
+            🎈
+            <div class="absolute -bottom-2 w-1 h-3 bg-pink-400"></div>
+          </div>
+          <span class="text-xs text-pink-200 font-semibold mt-3">Stardust</span>
+        </div>
+
+        <!-- Balloon 6 -->
+        <div class="balloon-item cursor-pointer flex flex-col items-center group transition-all duration-300" onclick="popBalloon(this, 'Forever & Always Yours, Tanya! Happy Birthday! 💫')">
+          <div class="w-16 h-20 sm:w-20 sm:h-24 rounded-full bg-gradient-to-t from-fuchsia-600 via-pink-400 to-amber-200 shadow-[0_10px_20px_rgba(217,70,239,0.4)] group-hover:scale-110 transition-transform flex items-center justify-center text-2xl relative">
+            🎈
+            <div class="absolute -bottom-2 w-1 h-3 bg-fuchsia-400"></div>
+          </div>
+          <span class="text-xs text-fuchsia-200 font-semibold mt-3">Grand Token</span>
+        </div>
+
+      </div>
+
+      <!-- Revealed Note Message Box -->
+      <div id="popMessage" class="hidden mt-6 p-4 rounded-2xl bg-gradient-to-r from-pink-950/90 via-purple-950/90 to-pink-950/90 border border-pink-400/40 text-center animate-bounce">
+        <span class="text-xs uppercase tracking-widest text-amber-300 font-bold block mb-1">💌 Unlocked Love Note</span>
+        <p id="popMessageText" class="font-script text-2xl text-white">...</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 8. COSMIC STARLIGHT JAR (FUNCTIONAL & PERSISTENT WISHES) -->
+  <!-- ============================================================ -->
+  <section id="wishjar" class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+      
+      <!-- Cast a Wish Box -->
+      <div class="glass-card rounded-3xl p-8 flex flex-col justify-between shadow-xl">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="inline-flex items-center gap-2 text-pink-300 text-xs font-bold uppercase tracking-wider">
+              <span class="material-symbols-outlined text-base">hotel_class</span>
+              <span>Cosmic Wishing Well</span>
+            </div>
+            <span id="starCountBadge" class="text-xs bg-pink-500/20 text-pink-200 px-3 py-1 rounded-full border border-pink-400/30">
+              0 Wishes Sealed ✨
+            </span>
+          </div>
+
+          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
+            Drop a Star in Tanya's Wish Jar 🌟
+          </h3>
+          <p class="text-pink-100/80 text-sm font-light leading-relaxed mb-6">
+            Cast a birthday wish or warm blessing for Princess Tanya. Every star drops into the glowing jar and stays saved forever.
+          </p>
+
+          <form onsubmit="handleWishSubmit(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-pink-200 mb-1.5">Your Name:</label>
+              <input type="text" id="wishAuthorInput" placeholder="Your Name or Nickname..." required class="w-full rounded-xl bg-pink-950/60 border border-pink-400/30 px-4 py-2.5 text-sm text-pink-100 placeholder-pink-300/40 focus:outline-none focus:border-pink-300"/>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-pink-200 mb-1.5">Your Birthday Wish for Tanya:</label>
+              <textarea id="wishTextInput" rows="3" placeholder="Write a starlight blessing for Tanya..." required class="w-full rounded-xl bg-pink-950/60 border border-pink-400/30 px-4 py-2.5 text-sm text-pink-100 placeholder-pink-300/40 focus:outline-none focus:border-pink-300"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white font-bold text-sm shadow-[0_4px_16px_rgba(244,114,182,0.4)] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-base">star</span>
+              <span>Drop Star into Jar ✨</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Animated Glass Wish Jar & Constellation -->
+      <div class="glass-card rounded-3xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold text-pink-300 uppercase tracking-wider">🌟 Sealed Starlight Wishes</span>
+            <span class="text-xs text-pink-300/70">Stored in Tanya's Vault</span>
+          </div>
+
+          <!-- Illustrated Glowing Glass Jar -->
+          <div class="relative w-44 h-48 mx-auto my-2 flex items-center justify-center">
+            <!-- Glass Jar Graphic -->
+            <div class="w-36 h-44 rounded-3xl border-4 border-pink-400/50 bg-gradient-to-b from-pink-500/10 via-pink-900/30 to-purple-900/40 backdrop-blur-md shadow-[0_0_30px_rgba(244,114,182,0.3)] relative overflow-hidden flex items-center justify-center">
+              <!-- Jar Lid -->
+              <div class="absolute top-0 w-24 h-4 bg-amber-300/80 rounded-b-lg shadow-md"></div>
+              <!-- Floating Stars inside jar -->
+              <div id="jarStarsContainer" class="absolute inset-0 p-2 flex flex-wrap items-center justify-center gap-1.5 overflow-hidden">
+                <span class="text-xl animate-float">⭐</span>
+                <span class="text-base animate-pulse">✨</span>
+                <span class="text-lg animate-float" style="animation-delay: 1s;">🌟</span>
+                <span class="text-sm animate-pulse" style="animation-delay: 1.5s;">⭐</span>
+                <span class="text-xl animate-float" style="animation-delay: 2s;">✨</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-Time List of Wishes -->
+          <div class="mt-4">
+            <span class="text-xs font-bold text-pink-200 uppercase tracking-wider block mb-2">Recent Starlight Wishes:</span>
+            <div id="wishesListContainer" class="space-y-2 max-h-44 overflow-y-auto pr-2">
+              <!-- Dynamically populated from localStorage -->
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-2">
+          <span class="text-[11px] text-pink-300/70 italic">Every wish cast remains illuminated forever.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 9. PRINCESS TANYA'S 2026-2027 ROMANTIC BUCKET LIST & PROMISES -->
+  <!-- (Replaces SFX Soundboard) -->
+  <!-- ============================================================ -->
+  <section id="bucketlist" class="max-w-4xl mx-auto px-6 py-20">
+    <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 text-pink-300 text-xs font-bold uppercase tracking-widest mb-2">
+          <span class="material-symbols-outlined text-base">checklist</span>
+          <span>Our Year Ahead (2026 - 2027)</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">
+          Tanya's Royal Bucket List &amp; Sweet Promises 💖
+        </h2>
+        <p class="text-pink-100/80 text-sm mt-2 font-light">
+          Six promises and adventures crafted for you this coming year. Tap any adventure to check it off!
+        </p>
+
+        <!-- Progress Counter -->
+        <div class="mt-4 inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-pink-950/70 border border-pink-400/30">
+          <span class="text-xs text-pink-200">Adventures Completed:</span>
+          <span id="bucketProgressText" class="text-xs font-bold text-amber-300 font-mono">2 of 6</span>
+        </div>
+      </div>
+
+      <!-- Checklist Items -->
+      <div class="space-y-3 max-w-2xl mx-auto" id="bucketListContainer">
+        
+        <div class="bucket-item p-4 rounded-2xl bg-pink-950/50 border border-pink-400/30 flex items-center justify-between cursor-pointer hover:bg-pink-900/50 transition-all" onclick="toggleBucketItem(this)">
+          <div class="flex items-center gap-3">
+            <span class="bucket-check material-symbols-outlined text-pink-400 text-xl">check_box</span>
+            <div>
+              <h5 class="text-sm font-bold text-white">Parisian Café Morning ☕🥐</h5>
+              <p class="text-xs text-pink-200/70">Croissants, hot cappuccino, and talking about dreams as the morning mist clears.</p>
+            </div>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-pink-500/20 text-pink-300 font-medium">Sweet Date</span>
+        </div>
+
+        <div class="bucket-item p-4 rounded-2xl bg-pink-950/50 border border-pink-400/30 flex items-center justify-between cursor-pointer hover:bg-pink-900/50 transition-all" onclick="toggleBucketItem(this)">
+          <div class="flex items-center gap-3">
+            <span class="bucket-check material-symbols-outlined text-pink-400 text-xl">check_box</span>
+            <div>
+              <h5 class="text-sm font-bold text-white">Hogwarts Marathon Under Fairy Lights 🏰⚡</h5>
+              <p class="text-xs text-pink-200/70">Cozy oversized blankets, butterbeer popcorn, and marathon-watching all 8 movies.</p>
+            </div>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 font-medium">Magic Night</span>
+        </div>
+
+        <div class="bucket-item p-4 rounded-2xl bg-pink-950/50 border border-pink-400/30 flex items-center justify-between cursor-pointer hover:bg-pink-900/50 transition-all" onclick="toggleBucketItem(this)">
+          <div class="flex items-center gap-3">
+            <span class="bucket-check material-symbols-outlined text-pink-400/50 text-xl">check_box_outline_blank</span>
+            <div>
+              <h5 class="text-sm font-bold text-white">Stargazing Blanket Picnic 🌌🍓</h5>
+              <p class="text-xs text-pink-200/70">Driving up to the highest hill with strawberries and pointing out constellations.</p>
+            </div>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 font-medium">Upcoming</span>
+        </div>
+
+        <div class="bucket-item p-4 rounded-2xl bg-pink-950/50 border border-pink-400/30 flex items-center justify-between cursor-pointer hover:bg-pink-900/50 transition-all" onclick="toggleBucketItem(this)">
+          <div class="flex items-center gap-3">
+            <span class="bucket-check material-symbols-outlined text-pink-400/50 text-xl">check_box_outline_blank</span>
+            <div>
+              <h5 class="text-sm font-bold text-white">Homemade Pasta &amp; Candlelight Cooking 🍝🍷</h5>
+              <p class="text-xs text-pink-200/70">Flour on our noses, slow jazz playing, and laughing over imperfect tortellini.</p>
+            </div>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-300 font-medium">Cozy Night</span>
+        </div>
+
+        <div class="bucket-item p-4 rounded-2xl bg-pink-950/50 border border-pink-400/30 flex items-center justify-between cursor-pointer hover:bg-pink-900/50 transition-all" onclick="toggleBucketItem(this)">
+          <div class="flex items-center gap-3">
+            <span class="bucket-check material-symbols-outlined text-pink-400/50 text-xl">check_box_outline_blank</span>
+            <div>
+              <h5 class="text-sm font-bold text-white">Spontaneous Beach Sunrise Roadtrip 🌅🌊</h5>
+              <p class="text-xs text-pink-200/70">Setting no alarms, waking up early, and watching the pink sunrise hit the waves.</p>
+            </div>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 font-medium">Adventure</span>
+        </div>
+
+        <div class="bucket-item p-4 rounded-2xl bg-pink-950/50 border border-pink-400/30 flex items-center justify-between cursor-pointer hover:bg-pink-900/50 transition-all" onclick="toggleBucketItem(this)">
+          <div class="flex items-center gap-3">
+            <span class="bucket-check material-symbols-outlined text-pink-400/50 text-xl">check_box_outline_blank</span>
+            <div>
+              <h5 class="text-sm font-bold text-white">Annual Tanya Birthday Photobook 📖✨</h5>
+              <p class="text-xs text-pink-200/70">Printing every polaroid and writing our favourite memories to keep forever.</p>
+            </div>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-pink-500/20 text-pink-300 font-medium">Keepsake</span>
+        </div>
+
+      </div>
+
+      <!-- Add New Custom Wish Button -->
+      <div class="mt-8 text-center">
+        <button onclick="promptNewBucketItem()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-pink-950/70 hover:bg-pink-900 border border-pink-400/40 text-pink-200 text-xs font-semibold shadow transition-all">
+          <span class="material-symbols-outlined text-sm text-amber-300">add_circle</span>
+          <span>Propose a New Adventure for Us 💕</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <footer class="border-t border-pink-400/20 py-12 px-6 text-center text-xs text-pink-200/60 bg-[#140212]">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">👑</span>
+        <span class="font-serif font-bold text-white text-sm">Princess Tanya's Royal Jubilee</span>
+      </div>
+      <p class="font-script text-xl text-pink-300">"Forever your loyal knight &amp; biggest admirer ❤️"</p>
+      <div>
+        <span>September 29th • Crafted with Love</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- MODAL 1: ROYAL LOVE LETTER MODAL (Deeply Emotional) -->
+  <!-- ============================================================ -->
+  <div id="loveLetterModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-gradient-to-b from-[#3a0d33] to-[#22041d] max-w-lg w-full rounded-3xl border-2 border-pink-400/50 p-8 shadow-[0_20px_60px_rgba(236,72,153,0.5)] relative">
+      <button onclick="toggleLoveLetterModal()" class="absolute top-4 right-4 p-2 rounded-full text-pink-200 hover:text-white bg-pink-950/60 border border-pink-400/30 transition-all">
+        <span class="material-symbols-outlined text-sm">close</span>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-300 mx-auto flex items-center justify-center mb-3 shadow-[0_0_20px_rgba(244,114,182,0.4)]">
+          <span class="material-symbols-outlined text-3xl text-pink-400">favorite</span>
+        </div>
+        <span class="text-xs uppercase tracking-widest text-amber-300 font-bold">Royal Wax Sealed Parchment</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-1">To My Dearest Princess Tanya 💌</h3>
+      </div>
+
+      <div class="space-y-3 text-sm text-pink-100/90 leading-relaxed max-h-[300px] overflow-y-auto pr-2">
+        <p>
+          Happy Birthday, my wonderful princess! ✨ Words will never fully capture how brightly you illuminate every single day. You bring pure fairy-tale magic into the real world.
+        </p>
+        <p>
+          Like the bravest Gryffindor, your heart is courageous and fiercely warm; and like true royalty, your kindness touches everyone lucky enough to be near you.
+        </p>
+        <p>
+          May this September 29th bring you endless laughter, sweet treats, floating lantern wishes, and a year full of dream adventures. I feel like the luckiest person in the universe to celebrate you today.
+        </p>
+        <p class="pt-4 font-script text-3xl text-pink-300 font-bold text-right">
+          Forever &amp; Always Yours ❤️
+        </p>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-pink-400/30 flex justify-end">
+        <button onclick="toggleLoveLetterModal()" class="px-6 py-2.5 rounded-xl bg-pink-500 text-white font-bold text-xs shadow-md hover:bg-pink-400 transition-all">
+          Close with a Kiss 💋
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MODAL 2: SURPRISE VIDEO PLAYER -->
+  <!-- (Opens a video when "Unwrap Surprise" is clicked) -->
+  <!-- ============================================================ -->
+  <div id="surpriseGiftModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden items-center justify-center p-4" onclick="closeSurpriseOnBackdrop(event)">
+    <div class="bg-gradient-to-b from-[#400d38] via-[#2d0727] to-[#1e021a] max-w-3xl w-full rounded-3xl border-2 border-pink-400/50 shadow-[0_20px_80px_rgba(236,72,153,0.5)] relative overflow-hidden">
+      
+      <!-- Close Button -->
+      <button onclick="toggleSurpriseModal()" class="absolute top-4 right-4 z-10 p-2.5 rounded-full text-pink-200 hover:text-white bg-black/60 border border-pink-400/40 transition-all hover:bg-pink-900/80 backdrop-blur-md">
+        <span class="material-symbols-outlined text-base">close</span>
+      </button>
+
+      <!-- Header -->
+      <div class="text-center pt-6 pb-4 px-6">
+        <span class="text-3xl mb-1 block">🎬✨</span>
+        <span class="text-xs uppercase tracking-widest text-pink-300 font-bold">A Special Surprise For You</span>
+        <h3 class="text-xl sm:text-2xl font-serif font-bold text-white mt-1">Eyes Don't Lie</h3>
+        <p class="text-xs text-pink-200/70 mt-1">Press play and let the magic begin, Princess Tanya!</p>
+      </div>
+
+      <!-- Video Container -->
+      <div class="px-6 pb-6">
+        <div class="relative rounded-2xl overflow-hidden border border-pink-400/30 shadow-[0_0_40px_rgba(236,72,153,0.3)] bg-black aspect-video">
+          <video 
+            id="surpriseVideo" 
+            class="w-full h-full object-contain" 
+            controls 
+            playsinline
+            preload="metadata"
+            poster=""
+          >
+            <source src="assets/video/video.MP4" type="video/mp4">
+            <source src="assets/video/surprise_video.webm" type="video/webm">
+            
+          </video>
+        </div>
+
+        <!-- Replay & Share Row -->
+        <div class="flex items-center justify-center gap-3 mt-4">
+          <button onclick="replaySurpriseVideo()" class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-pink-950/80 hover:bg-pink-900 border border-pink-400/30 text-pink-200 text-xs font-bold transition-all">
+            <span class="material-symbols-outlined text-sm">replay</span>
+            Replay
+          </button>
+          <button onclick="triggerConfetti();" class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 via-pink-500 to-rose-500 text-white text-xs font-bold shadow-md hover:brightness-110 transition-all">
+            <span class="material-symbols-outlined text-sm">celebration</span>
+            Celebrate 🎉
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MODAL 3: PHOTO INSPECTION MODAL -->
+  <!-- ============================================================ -->
+  <div id="photoModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-gradient-to-b from-[#380c32] to-[#250520] max-w-md w-full rounded-3xl border border-pink-400/40 p-6 shadow-[0_20px_50px_rgba(236,72,153,0.35)] relative">
+      <button onclick="closePhotoModal()" class="absolute top-3 right-3 p-1.5 rounded-full text-pink-200 hover:text-white bg-pink-950/60 border border-pink-400/30">
+        <span class="material-symbols-outlined text-sm">close</span>
+      </button>
+      <div class="rounded-2xl overflow-hidden mb-4 h-52 bg-pink-950/50">
+        <img id="photoModalImg" src="" alt="Memory" class="w-full h-full object-cover"/>
+      </div>
+      <div class="text-center">
+        <h3 class="text-xl font-serif font-bold text-white" id="photoModalTitle">Photo Title</h3>
+        <p class="text-xs text-pink-100/80 mt-1 font-light" id="photoModalDesc">Description</p>
+      </div>
+      <div class="mt-4">
+        <label class="block text-xs font-semibold text-pink-200 mb-1.5">Add a Note to Tanya's Album:</label>
+        <textarea id="photoNoteInput" placeholder="Write a memory note for Tanya..." rows="2" class="w-full bg-pink-950/70 border border-pink-400/30 rounded-xl p-2.5 text-xs text-pink-100 placeholder-pink-300/40 focus:outline-none focus:border-pink-300"></textarea>
+        <button onclick="submitPhotoNote()" class="mt-2.5 w-full py-2 bg-gradient-to-r from-pink-500 to-rose-400 text-white font-bold text-xs rounded-xl shadow transition-all hover:brightness-110">
+          Save Note in Album ✨
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MODAL 4: 7-SECOND 3D BIRTHDAY CAKE CELEBRATION OVERLAY -->
+  <!-- (Triggered upon popping all balloons) -->
+  <!-- ============================================================ -->
+  <div id="cakeCelebrationOverlay" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden flex-col items-center justify-center p-6 text-center">
+    <div class="max-w-md w-full glass-card rounded-3xl p-8 border-2 border-pink-400 shadow-[0_0_80px_rgba(244,114,182,0.6)] animate-glow">
+      <span class="text-5xl block mb-2 animate-bounce">🎂✨</span>
+      <h3 class="text-3xl font-serif font-bold text-white mb-2">Happy Birthday Tanya!</h3>
+      <p class="text-xs text-pink-200 mb-6">All balloons popped! Royal celebration spell activated!</p>
+      
+      <!-- 7-Second Countdown Circle -->
+      <div class="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-full border-4 border-pink-400 shadow-[0_0_30px_rgba(244,114,182,0.8)] bg-pink-950/60">
+        <span id="cakeCelebrationTimer" class="text-5xl font-serif font-bold text-amber-300 animate-pulse">7</span>
+      </div>
+
+      <p class="text-sm font-script text-2xl text-pink-200 mb-6">"May your year be filled with endless magic, laughter, and joy!"</p>
+      <button onclick="closeCakeCelebration()" class="px-6 py-2.5 rounded-full bg-pink-500 hover:bg-pink-400 text-white text-xs font-bold shadow-lg transition-all">
+        Continue Celebrating 🎉
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- JAVASCRIPT LOGIC -->
+  <!-- ============================================================ -->
+  <script>
+    // --- 1. MAGIC WAND CURSOR SPARKLE TRAIL ---
+    const trailCanvas = document.getElementById('trailCanvas');
+    const trailCtx = trailCanvas.getContext('2d');
+    let trailParticles = [];
+
+    function resizeTrail() {
+      trailCanvas.width = window.innerWidth;
+      trailCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeTrail);
+    resizeTrail();
+
+    window.addEventListener('mousemove', (e) => {
+      for (let i = 0; i < 2; i++) {
+        trailParticles.push({
+          x: e.clientX,
+          y: e.clientY,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2 - 1,
+          size: Math.random() * 3 + 1.5,
+          color: ['#f472b6', '#fb7185', '#ffd166', '#ffffff'][Math.floor(Math.random() * 4)],
+          alpha: 1
+        });
+      }
+    });
+
+    function animateTrail() {
+      trailCtx.clearRect(0, 0, trailCanvas.width, trailCanvas.height);
+      for (let i = 0; i < trailParticles.length; i++) {
+        const p = trailParticles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.03;
+        p.size *= 0.95;
+
+        trailCtx.save();
+        trailCtx.globalAlpha = Math.max(p.alpha, 0);
+        trailCtx.fillStyle = p.color;
+        trailCtx.shadowBlur = 6;
+        trailCtx.shadowColor = p.color;
+        trailCtx.beginPath();
+        trailCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        trailCtx.fill();
+        trailCtx.restore();
+      }
+      trailParticles = trailParticles.filter(p => p.alpha > 0);
+      requestAnimationFrame(animateTrail);
+    }
+    animateTrail();
+
+    // --- 2. CONFETTI CANNON SYSTEM ---
+    const confettiCanvas = document.getElementById('confettiCanvas');
+    const confettiCtx = confettiCanvas.getContext('2d');
+    let confettiParticles = [];
+    let isConfettiRunning = false;
+
+    function resizeConfetti() {
+      confettiCanvas.width = window.innerWidth;
+      confettiCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeConfetti);
+    resizeConfetti();
+
+    function triggerConfetti() {
+      playSFX('cheer');
+      const colors = ['#f472b6', '#ec4899', '#f43f5e', '#fb7185', '#fde047', '#ffd166', '#ffffff'];
+      for (let i = 0; i < 140; i++) {
+        confettiParticles.push({
+          x: confettiCanvas.width / 2 + (Math.random() - 0.5) * 300,
+          y: confettiCanvas.height * 0.45,
+          vx: (Math.random() - 0.5) * 18,
+          vy: (Math.random() - 0.8) * 16,
+          size: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 12,
+          alpha: 1
+        });
+      }
+      if (!isConfettiRunning) {
+        isConfettiRunning = true;
+        animateConfetti();
+      }
+    }
+
+    function animateConfetti() {
+      confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      for (let i = 0; i < confettiParticles.length; i++) {
+        const p = confettiParticles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.35;
+        p.rotation += p.rotSpeed;
+        p.alpha -= 0.007;
+
+        confettiCtx.save();
+        confettiCtx.globalAlpha = Math.max(p.alpha, 0);
+        confettiCtx.translate(p.x, p.y);
+        confettiCtx.rotate((p.rotation * Math.PI) / 180);
+        confettiCtx.fillStyle = p.color;
+        confettiCtx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+        confettiCtx.restore();
+      }
+      confettiParticles = confettiParticles.filter(p => p.alpha > 0);
+      if (confettiParticles.length > 0) {
+        requestAnimationFrame(animateConfetti);
+      } else {
+        isConfettiRunning = false;
+        confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      }
+    }
+
+    // --- 3. AUDIO SYNTHESIZER & BIRTHDAY MELODY (POLYPHONIC MUSIC BOX) ---
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      return audioCtx;
+    }
+
+    function playNote(freq, duration = 0.45, type = 'sine', gainVal = 0.15) {
+      try {
+        const ctx = getAudioContext();
+        if (ctx.state === 'suspended') ctx.resume();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(gainVal, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + duration + 0.05);
+      } catch(e) {}
+    }
+
+    function playSFX(type) {
+      try {
+        const ctx = getAudioContext();
+        if (ctx.state === 'suspended') ctx.resume();
+        if (type === 'spell' || type === 'harp') {
+          const notes = [523.25, 659.25, 783.99, 1046.50];
+          notes.forEach((f, idx) => {
+            setTimeout(() => playNote(f, 0.4, 'triangle', 0.12), idx * 70);
+          });
+        } else if (type === 'cheer') {
+          const chord = [440, 554.37, 659.25, 880];
+          chord.forEach(f => playNote(f, 0.7, 'triangle', 0.1));
+        } else if (type === 'pop') {
+          playNote(480, 0.12, 'square', 0.15);
+        } else if (type === 'win') {
+          const fanfare = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+          fanfare.forEach((f, idx) => {
+            setTimeout(() => playNote(f, 0.5, 'sine', 0.15), idx * 80);
+          });
+        }
+      } catch(e) {}
+    }
+
+    const birthdaySongNotes = [
+      { freq: 261.63, dur: 0.35, beat: 0 },
+      { freq: 261.63, dur: 0.25, beat: 0.4 },
+      { freq: 293.66, dur: 0.6, beat: 0.7 },
+      { freq: 261.63, dur: 0.6, beat: 1.4 },
+      { freq: 349.23, dur: 0.6, beat: 2.1 },
+      { freq: 329.63, dur: 1.1, beat: 2.8 },
+      { freq: 261.63, dur: 0.35, beat: 4.2 },
+      { freq: 261.63, dur: 0.25, beat: 4.6 },
+      { freq: 293.66, dur: 0.6, beat: 4.9 },
+      { freq: 261.63, dur: 0.6, beat: 5.6 },
+      { freq: 392.00, dur: 0.6, beat: 6.3 },
+      { freq: 349.23, dur: 1.1, beat: 7.0 },
+      { freq: 261.63, dur: 0.35, beat: 8.4 },
+      { freq: 261.63, dur: 0.25, beat: 8.8 },
+      { freq: 523.25, dur: 0.6, beat: 9.1 },
+      { freq: 440.00, dur: 0.6, beat: 9.8 },
+      { freq: 349.23, dur: 0.6, beat: 10.5 },
+      { freq: 329.63, dur: 0.6, beat: 11.2 },
+      { freq: 293.66, dur: 0.9, beat: 11.9 },
+      { freq: 466.16, dur: 0.35, beat: 13.2 },
+      { freq: 466.16, dur: 0.25, beat: 13.6 },
+      { freq: 440.00, dur: 0.6, beat: 13.9 },
+      { freq: 349.23, dur: 0.6, beat: 14.6 },
+      { freq: 392.00, dur: 0.6, beat: 15.3 },
+      { freq: 349.23, dur: 1.4, beat: 16.0 }
+    ];
+
+    let songPlaying = false;
+    let songTimeouts = [];
+
+    function playBirthdayMelody() {
+      stopBirthdayMelody();
+      songPlaying = true;
+      const tempo = 0.52;
+      birthdaySongNotes.forEach((note) => {
+        const tid = setTimeout(() => {
+          if (!songPlaying) return;
+          // Music box chime + harmonic harp bass
+          playNote(note.freq, note.dur, 'triangle', 0.14);
+          playNote(note.freq * 0.5, note.dur * 0.8, 'sine', 0.08);
+          playNote(note.freq * 1.5, note.dur * 0.6, 'sine', 0.06);
+        }, note.beat * tempo * 1000);
+        songTimeouts.push(tid);
+      });
+
+      const totalTime = 18 * tempo * 1000;
+      const loopTid = setTimeout(() => {
+        if (songPlaying) playBirthdayMelody();
+      }, totalTime);
+      songTimeouts.push(loopTid);
+
+      const musicBtn = document.getElementById('musicToggleBtn');
+      if (musicBtn) musicBtn.classList.add('bg-pink-500', 'text-white');
+    }
+
+    function stopBirthdayMelody() {
+      songPlaying = false;
+      songTimeouts.forEach(clearTimeout);
+      songTimeouts = [];
+      const musicBtn = document.getElementById('musicToggleBtn');
+      if (musicBtn) musicBtn.classList.remove('bg-pink-500', 'text-white');
+    }
+
+    function toggleBirthdayMusic() {
+      if (songPlaying) stopBirthdayMelody();
+      else playBirthdayMelody();
+    }
+
+    // --- 4. STARLIGHT AURA TOGGLE ---
+    let auraActive = false;
+    let auraInterval = null;
+    function toggleStarlightAura() {
+      const btn = document.getElementById('auraToggleBtn');
+      auraActive = !auraActive;
+      if (auraActive) {
+        btn.classList.add('bg-pink-500', 'text-white', 'shadow-[0_0_15px_rgba(244,114,182,0.8)]');
+        playSFX('spell');
+        auraInterval = setInterval(() => {
+          for (let i = 0; i < 4; i++) {
+            trailParticles.push({
+              x: Math.random() * window.innerWidth,
+              y: window.innerHeight + 10,
+              vx: (Math.random() - 0.5) * 2,
+              vy: -(Math.random() * 2 + 1),
+              size: Math.random() * 4 + 2,
+              color: '#f472b6',
+              alpha: 1
+            });
+          }
+        }, 150);
+      } else {
+        btn.classList.remove('bg-pink-500', 'text-white', 'shadow-[0_0_15px_rgba(244,114,182,0.8)]');
+        clearInterval(auraInterval);
+      }
+    }
+
+    // --- 5. MODALS TOGGLES ---
+    function toggleLoveLetterModal() {
+      const modal = document.getElementById('loveLetterModal');
+      modal.classList.toggle('hidden');
+      modal.classList.toggle('flex');
+      if (!modal.classList.contains('hidden')) playSFX('harp');
+    }
+
+    function toggleSurpriseModal() {
+      const modal = document.getElementById('surpriseGiftModal');
+      const video = document.getElementById('surpriseVideo');
+      const isOpening = modal.classList.contains('hidden');
+      
+      modal.classList.toggle('hidden');
+      modal.classList.toggle('flex');
+      
+      if (isOpening) {
+        playSFX('spell');
+        // Auto-play the video when modal opens
+        if (video) {
+          video.currentTime = 0;
+          video.play().catch(() => {}); // catch autoplay restrictions gracefully
+        }
+      } else {
+        // Pause and reset video when modal closes
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    }
+
+    function replaySurpriseVideo() {
+      const video = document.getElementById('surpriseVideo');
+      if (video) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      }
+    }
+
+    function closeSurpriseOnBackdrop(event) {
+      // Close modal only if user clicks on the backdrop (not the inner card)
+      if (event.target === event.currentTarget) {
+        toggleSurpriseModal();
+      }
+    }
+
+    function openPhotoModal(title, desc, src) {
+      document.getElementById('photoModalTitle').textContent = title;
+      document.getElementById('photoModalDesc').textContent = desc;
+      document.getElementById('photoModalImg').src = src;
+      const modal = document.getElementById('photoModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      playSFX('spell');
+    }
+
+    function closePhotoModal() {
+      const modal = document.getElementById('photoModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function submitPhotoNote() {
+      const val = document.getElementById('photoNoteInput').value.trim();
+      if (val) {
+        triggerConfetti();
+        alert("✨ Your memory note for Princess Tanya has been inscribed in her royal scrapbook!");
+        document.getElementById('photoNoteInput').value = '';
+        closePhotoModal();
+      }
+    }
+
+    // --- 6. REAL-TIME COUNTDOWN TO SEPTEMBER 29th ---
+    function updateCountdown() {
+      const now = new Date();
+      let targetYear = now.getFullYear();
+      let targetDate = new Date(targetYear, 8, 29, 0, 0, 0); // Month 8 is September
+      if (now > targetDate) {
+        targetDate = new Date(targetYear + 1, 8, 29, 0, 0, 0);
+      }
+      const diff = targetDate - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // --- 7. MINI-GAME 1: TIC TAC TOE (👑 vs 🪄) ---
+    let tttBoard = Array(9).fill(null);
+    let tttGameOver = false;
+
+    function handleTTTClick(idx) {
+      if (tttBoard[idx] || tttGameOver) return;
+      playSFX('pop');
+      tttBoard[idx] = '👑';
+      renderTTT();
+
+      if (checkTTTWinner('👑')) {
+        handleTTTVictory('👑 Princess Tanya Wins! Eternal Royalty! 🎉');
+        return;
+      }
+      if (tttBoard.every(c => c !== null)) {
+        document.getElementById('ttt-status').textContent = "It's a Royal Draw! 💕";
+        return;
+      }
+
+      // AI move
+      document.getElementById('ttt-status').textContent = "Magic Wand Thinking... 🪄";
+      setTimeout(aiTTTMove, 450);
+    }
+
+    function aiTTTMove() {
+      if (tttGameOver) return;
+      const letTanyaWin = document.getElementById('ttt-tanya-win').checked;
+      const emptyIndices = tttBoard.map((val, i) => val === null ? i : null).filter(v => v !== null);
+      if (emptyIndices.length === 0) return;
+
+      let move = emptyIndices[0];
+
+      if (letTanyaWin) {
+        // AI purposely picks non-blocking moves or lets Tanya win easily!
+        move = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
+      } else {
+        // Smart AI
+        move = emptyIndices[0];
+      }
+
+      playSFX('spell');
+      tttBoard[move] = '🪄';
+      renderTTT();
+
+      if (checkTTTWinner('🪄')) {
+        tttGameOver = true;
+        document.getElementById('ttt-status').textContent = "Magic Wand Wins!";
+      } else if (tttBoard.every(c => c !== null)) {
+        document.getElementById('ttt-status').textContent = "It's a Royal Draw! 💕";
+      } else {
+        document.getElementById('ttt-status').textContent = "Tanya's Turn (👑)";
+      }
+    }
+
+    function checkTTTWinner(player) {
+      const wins = [
+        [0,1,2],[3,4,5],[6,7,8],
+        [0,3,6],[1,4,7],[2,5,8],
+        [0,4,8],[2,4,6]
+      ];
+      return wins.some(([a,b,c]) => tttBoard[a] === player && tttBoard[b] === player && tttBoard[c] === player);
+    }
+
+    function handleTTTVictory(msg) {
+      tttGameOver = true;
+      document.getElementById('ttt-status').textContent = msg;
+      playSFX('win');
+      triggerConfetti();
+    }
+
+    function renderTTT() {
+      const cells = document.querySelectorAll('.ttt-cell');
+      cells.forEach((cell, i) => {
+        cell.textContent = tttBoard[i] || '';
+        if (tttBoard[i] === '👑') cell.classList.add('text-amber-300');
+        else if (tttBoard[i] === '🪄') cell.classList.add('text-pink-300');
+      });
+    }
+
+    function resetTTT() {
+      tttBoard = Array(9).fill(null);
+      tttGameOver = false;
+      document.getElementById('ttt-status').textContent = "Tanya's Turn (👑)";
+      renderTTT();
+    }
+
+    // --- 8. MINI-GAME 2: MEMORY MATCH FLIP ---
+    const matchSymbols = ['👑', '⚡', '🌹', '🦋', '💌', '💍'];
+    let matchCards = [];
+    let flippedCards = [];
+    let matchedPairs = 0;
+    let matchLocked = false; // prevent clicking during flip animation
+
+    function initMemoryMatch() {
+      const board = document.getElementById('match-board');
+      board.innerHTML = '';
+      matchCards = [...matchSymbols, ...matchSymbols].sort(() => Math.random() - 0.5);
+      flippedCards = [];
+      matchedPairs = 0;
+      matchLocked = false;
+      updateMatchStatus();
+
+      matchCards.forEach((sym, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'match-cell h-14 rounded-xl bg-pink-950/70 border border-pink-400/30 text-xl flex items-center justify-center hover:bg-pink-900/60 transition-all duration-200';
+        btn.dataset.index = idx;
+        btn.dataset.symbol = sym;
+        btn.textContent = '✨';
+        btn.onclick = () => handleMatchCardClick(btn);
+        board.appendChild(btn);
+      });
+    }
+
+    function updateMatchStatus() {
+      const statusEl = document.getElementById('match-status');
+      if (matchedPairs >= 6) {
+        statusEl.innerHTML = '🎉 All Pairs Found! Tanya is Pure Magic!';
+      } else {
+        statusEl.innerHTML = 'Pairs Found: <span id="pairs-count">' + matchedPairs + '</span> / 6';
+      }
+    }
+
+    function handleMatchCardClick(btn) {
+  // Ignore clicks on matched cards, already flipped cards, or when locked
+  if (btn.classList.contains('matched') || flippedCards.includes(btn) || matchLocked || flippedCards.length >= 2) return;
+
+  playSFX('pop');
+  // Reveal the card
+  btn.textContent = btn.dataset.symbol;
+  btn.classList.add('bg-pink-800/80', 'border-pink-300');
+  flippedCards.push(btn);
+
+  const letTanyaWin = document.getElementById('match-tanya-win').checked;
+
+  if (flippedCards.length === 1 && letTanyaWin) {
+    // "Let Tanya Win" hint: briefly highlight the matching card
+    const firstSymbol = btn.dataset.symbol;
+    const allCells = document.querySelectorAll('#match-board .match-cell');
+    allCells.forEach(cell => {
+      if (cell !== btn && cell.dataset.symbol === firstSymbol && !cell.classList.contains('matched')) {
+        cell.classList.add('ring-2', 'ring-amber-300/70', 'animate-pulse');
+        setTimeout(() => {
+          cell.classList.remove('ring-2', 'ring-amber-300/70', 'animate-pulse');
+        }, 1200);
+      }
+    });
+  }
+
+  if (flippedCards.length === 2) {
+    matchLocked = true;
+    const [c1, c2] = flippedCards;
+
+    let isMatch = c1.dataset.symbol === c2.dataset.symbol;
+
+    // If assist is on and it wasn't a real match, quietly rig the
+    // second card's symbol to match the first before resolving.
+    if (!isMatch && letTanyaWin) {
+      c2.dataset.symbol = c1.dataset.symbol;
+      c2.textContent = c1.dataset.symbol;
+      isMatch = true;
+    }
+
+    if (isMatch) {
+      // It's a match!
+      setTimeout(() => {
+        playSFX('spell');
+        c1.classList.add('matched', 'border-amber-300', 'text-amber-300', 'scale-95');
+        c2.classList.add('matched', 'border-amber-300', 'text-amber-300', 'scale-95');
+        c1.classList.remove('bg-pink-800/80', 'border-pink-300');
+        c2.classList.remove('bg-pink-800/80', 'border-pink-300');
+        matchedPairs++;
+        updateMatchStatus();
+        flippedCards = [];
+        matchLocked = false;
+
+        if (matchedPairs >= 6) {
+          playSFX('win');
+          triggerConfetti();
+        }
+      }, 400);
+    } else {
+      // Not a match — flip back
+      setTimeout(() => {
+        c1.textContent = '✨';
+        c2.textContent = '✨';
+        c1.classList.remove('bg-pink-800/80', 'border-pink-300');
+        c2.classList.remove('bg-pink-800/80', 'border-pink-300');
+        flippedCards = [];
+        matchLocked = false;
+      }, 900);
+    }
+  }
+}
+    function resetMemoryMatch() {
+      initMemoryMatch();
+    }
+    initMemoryMatch();
+
+    // --- 9. MINI-GAME 3: ROYAL FORTUNE WHEEL ---
+    const wheelCanvas = document.getElementById('wheelCanvas');
+    const wCtx = wheelCanvas.getContext('2d');
+    const wheelSlices = [
+      { text: "Paris Trip ✈️", color: "#f472b6" },
+      { text: "Unlimited Hugs 🤗", color: "#ec4899" },
+      { text: "Breakfast in Bed 🥐", color: "#fb7185" },
+      { text: "Wish Granted 🌟", color: "#f43f5e" },
+      { text: "Dinner Date 🍝", color: "#e11d48" },
+      { text: "Endless Kisses 💋", color: "#be123c" }
+    ];
+    let isSpinning = false;
+    let wheelCurrentRot = 0;
+
+    function drawWheel() {
+      const numSlices = wheelSlices.length;
+      const sliceAngle = (Math.PI * 2) / numSlices;
+      const radius = wheelCanvas.width / 2;
+      wCtx.clearRect(0, 0, wheelCanvas.width, wheelCanvas.height);
+
+      wheelSlices.forEach((slice, i) => {
+        const start = i * sliceAngle;
+        const end = start + sliceAngle;
+        wCtx.beginPath();
+        wCtx.moveTo(radius, radius);
+        wCtx.arc(radius, radius, radius - 4, start, end);
+        wCtx.fillStyle = slice.color;
+        wCtx.fill();
+        wCtx.strokeStyle = '#ffffff';
+        wCtx.lineWidth = 2;
+        wCtx.stroke();
+
+        // Label
+        wCtx.save();
+        wCtx.translate(radius, radius);
+        wCtx.rotate(start + sliceAngle / 2);
+        wCtx.textAlign = 'right';
+        wCtx.fillStyle = '#ffffff';
+        wCtx.font = 'bold 10px Plus Jakarta Sans';
+        wCtx.fillText(slice.text, radius - 16, 4);
+        wCtx.restore();
+      });
+
+      // Center button
+      wCtx.beginPath();
+      wCtx.arc(radius, radius, 16, 0, Math.PI * 2);
+      wCtx.fillStyle = '#170215';
+      wCtx.fill();
+      wCtx.strokeStyle = '#ffd166';
+      wCtx.lineWidth = 3;
+      wCtx.stroke();
+    }
+    drawWheel();
+
+    function spinRoyalWheel() {
+      if (isSpinning) return;
+      isSpinning = true;
+      playSFX('spell');
+      document.getElementById('wheel-status').textContent = "Spinning with royal magic... 🎡";
+
+      const letTanyaWin = document.getElementById('wheel-tanya-win').checked;
+      // If Tanya win is checked, always target "Wish Granted 🌟" or "Paris Trip ✈️"
+      const targetIndex = letTanyaWin ? 3 : Math.floor(Math.random() * wheelSlices.length);
+      const sliceDegrees = 360 / wheelSlices.length;
+      
+      // Calculate rotation to land under top pointer
+      const targetDeg = 360 * 5 + (360 - (targetIndex * sliceDegrees + sliceDegrees / 2) - 90);
+      wheelCurrentRot += targetDeg;
+
+      wheelCanvas.style.transform = `rotate(${wheelCurrentRot}deg)`;
+
+      setTimeout(() => {
+        isSpinning = false;
+        playSFX('win');
+        triggerConfetti();
+        document.getElementById('wheel-status').textContent = `🎉 Reward: ${wheelSlices[targetIndex].text}!`;
+        alert(`✨ Royal Wheel Winner: Tanya won "${wheelSlices[targetIndex].text}"! Sealed by the stars!`);
+      }, 3600);
+    }
+
+    // --- 10. BALLOON POPPING & 7-SECOND CAKE CELEBRATION ---
+    let poppedBalloons = 0;
+
+    function popBalloon(el, message) {
+      if (el.dataset.popped === 'true') return;
+      el.dataset.popped = 'true';
+      poppedBalloons++;
+      document.getElementById('popScore').textContent = `${poppedBalloons} / 6`;
+
+      el.style.transform = 'scale(0) rotate(25deg)';
+      el.style.opacity = '0';
+      el.style.pointerEvents = 'none';
+
+      playSFX('pop');
+
+      const msgBox = document.getElementById('popMessage');
+      const msgText = document.getElementById('popMessageText');
+      msgText.textContent = `"${message}"`;
+      msgBox.classList.remove('hidden');
+
+      if (poppedBalloons === 6) {
+        // Trigger Birthday Song & 7-Second 3D Cake Celebration!
+        setTimeout(start7SecondCakeCelebration, 600);
+      }
+    }
+
+    function resetBalloons() {
+      poppedBalloons = 0;
+      document.getElementById('popScore').textContent = '0 / 6';
+      document.querySelectorAll('.balloon-item').forEach(el => {
+        el.dataset.popped = 'false';
+        el.style.transform = '';
+        el.style.opacity = '1';
+        el.style.pointerEvents = 'auto';
+      });
+      document.getElementById('popMessage').classList.add('hidden');
+    }
+
+    let cakeTimerInterval = null;
+    function start7SecondCakeCelebration() {
+      triggerConfetti();
+      playBirthdayMelody();
+
+      const overlay = document.getElementById('cakeCelebrationOverlay');
+      const timerEl = document.getElementById('cakeCelebrationTimer');
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+
+      let count = 7;
+      timerEl.textContent = count;
+
+      cakeTimerInterval = setInterval(() => {
+        count--;
+        if (count > 0) {
+          timerEl.textContent = count;
+          triggerConfetti();
+        } else {
+          clearInterval(cakeTimerInterval);
+          timerEl.textContent = '🎉';
+        }
+      }, 1000);
+    }
+
+    function closeCakeCelebration() {
+      clearInterval(cakeTimerInterval);
+      const overlay = document.getElementById('cakeCelebrationOverlay');
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+    }
+
+    // --- 11. COSMIC STARLIGHT JAR (PERSISTENT WITH LOCALSTORAGE) ---
+    function getStoredWishes() {
+      try {
+        const data = localStorage.getItem('tanya_wishes');
+        return data ? JSON.parse(data) : [
+          { author: "Your Knight", text: "May your smile shine brighter than all the stars combined. Happy Birthday!", time: "Today" },
+          { author: "Hogwarts Castle", text: "100 points to Gryffindor for the most enchanting princess.", time: "Today" }
+        ];
+      } catch(e) {
+        return [];
+      }
+    }
+
+    function saveStoredWishes(wishes) {
+      try {
+        localStorage.setItem('tanya_wishes', JSON.stringify(wishes));
+      } catch(e) {}
+    }
+
+    function renderWishes() {
+      const container = document.getElementById('wishesListContainer');
+      const wishes = getStoredWishes();
+      document.getElementById('starCountBadge').textContent = `${wishes.length} Wishes Sealed ✨`;
+      container.innerHTML = '';
+
+      wishes.forEach(w => {
+        const item = document.createElement('div');
+        item.className = 'p-3 rounded-xl bg-pink-950/60 border border-pink-400/25 text-left';
+        item.innerHTML = `
+          <div class="flex items-center justify-between text-[11px] text-pink-300 font-bold mb-1">
+            <span>✨ ${w.author}</span>
+            <span class="text-[10px] text-pink-400/70">${w.time || 'Recently'}</span>
+          </div>
+          <p class="text-xs text-pink-100 font-light">"${w.text}"</p>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function handleWishSubmit(e) {
+      e.preventDefault();
+      const author = document.getElementById('wishAuthorInput').value.trim();
+      const text = document.getElementById('wishTextInput').value.trim();
+      if (!author || !text) return;
+
+      const wishes = getStoredWishes();
+      wishes.unshift({ author, text, time: "Just now" });
+      saveStoredWishes(wishes);
+      renderWishes();
+
+      // Spawn falling star visual inside jar
+      const jarStars = document.getElementById('jarStarsContainer');
+      const star = document.createElement('span');
+      star.className = 'text-2xl animate-bounce';
+      star.textContent = '⭐';
+      jarStars.appendChild(star);
+
+      playSFX('spell');
+      triggerConfetti();
+
+      document.getElementById('wishAuthorInput').value = '';
+      document.getElementById('wishTextInput').value = '';
+
+      alert(`✨ Star sealed! Your wish "${text}" has been permanently inscribed in Princess Tanya's cosmic jar.`);
+    }
+    renderWishes();
+
+    // --- 12. ROMANTIC BUCKET LIST INTERACTION ---
+    function toggleBucketItem(el) {
+      const icon = el.querySelector('.bucket-check');
+      if (icon.textContent === 'check_box') {
+        icon.textContent = 'check_box_outline_blank';
+        icon.classList.remove('text-pink-400');
+        icon.classList.add('text-pink-400/50');
+      } else {
+        icon.textContent = 'check_box';
+        icon.classList.remove('text-pink-400/50');
+        icon.classList.add('text-pink-400');
+        playSFX('harp');
+        triggerConfetti();
+      }
+      updateBucketProgress();
+    }
+
+    function updateBucketProgress() {
+      const items = document.querySelectorAll('.bucket-item');
+      const checked = Array.from(items).filter(i => i.querySelector('.bucket-check').textContent === 'check_box').length;
+      document.getElementById('bucketProgressText').textContent = `${checked} of ${items.length}`;
+    }
+
+    function promptNewBucketItem() {
+      const idea = prompt("💕 Propose a new dream date or adventure for Tanya:");
+      if (idea && idea.trim()) {
+        const container = document.getElementById('bucketListContainer');
+        const newItem = document.createElement('div');
+        newItem.className = 'bucket-item p-4 rounded-2xl bg-pink-950/50 border border-pink-400/30 flex items-center justify-between cursor-pointer hover:bg-pink-900/50 transition-all';
+        newItem.onclick = () => toggleBucketItem(newItem);
+        newItem.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="bucket-check material-symbols-outlined text-pink-400 text-xl">check_box</span>
+            <div>
+              <h5 class="text-sm font-bold text-white">${idea} ✨</h5>
+              <p class="text-xs text-pink-200/70">Custom romantic memory waiting to happen.</p>
+            </div>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-pink-500/20 text-pink-300 font-medium">New Idea</span>
+        `;
+        container.appendChild(newItem);
+        playSFX('spell');
+        triggerConfetti();
+        updateBucketProgress();
+      }
+    }
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- 3D THREE.JS HERO SCENE (CLEAN, MODERN, AESTHETIC) -->
+  <!-- ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('threejs-hero-container');
+      if (!container) return;
+
+      const width = container.clientWidth || window.innerWidth;
+      const height = container.clientHeight || window.innerHeight;
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x170215, 0.032);
+
+      const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+      camera.position.set(0, 2.0, 9.0);
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+      container.appendChild(renderer.domElement);
+
+      // Clean, elegant studio lighting
+      const ambientLight = new THREE.AmbientLight(0xffd5e5, 1.8);
+      scene.add(ambientLight);
+
+      const mainSpot = new THREE.SpotLight(0xff85a1, 4.0, 30, Math.PI / 4, 0.3);
+      mainSpot.position.set(0, 8, 6);
+      scene.add(mainSpot);
+
+      const snitchLight = new THREE.PointLight(0xffd700, 3.5, 18);
+      snitchLight.position.set(2, 3, 2);
+      scene.add(snitchLight);
+
+      // Master Group
+      const masterGroup = new THREE.Group();
+      scene.add(masterGroup);
+
+      // Materials
+      const crystalStandMat = new THREE.MeshPhongMaterial({ 
+        color: 0xfff0f6, 
+        transparent: true, 
+        opacity: 0.85, 
+        shininess: 130 
+      });
+      const goldMat = new THREE.MeshPhongMaterial({ color: 0xf6c28b, shininess: 150 });
+      const frostingPinkMat = new THREE.MeshPhongMaterial({ color: 0xffa8c5, shininess: 90 });
+      const softBlushMat = new THREE.MeshPhongMaterial({ color: 0xffd2e2, shininess: 80 });
+
+      // Clean Pedestal
+      const stand = new THREE.Mesh(new THREE.CylinderGeometry(2.5, 2.7, 0.22, 48), crystalStandMat);
+      stand.position.y = -1.5;
+      masterGroup.add(stand);
+
+      // Tier 1 (Base Tier - Soft Blush)
+      const tier1 = new THREE.Mesh(new THREE.CylinderGeometry(2.2, 2.2, 0.85, 48), softBlushMat);
+      tier1.position.y = -1.0;
+      masterGroup.add(tier1);
+
+      const rim1 = new THREE.Mesh(new THREE.TorusGeometry(2.22, 0.08, 16, 48), goldMat);
+      rim1.rotation.x = Math.PI / 2;
+      rim1.position.y = -1.4;
+      masterGroup.add(rim1);
+
+      // Tier 2 (Princess Rose Tier)
+      const tier2 = new THREE.Mesh(new THREE.CylinderGeometry(1.6, 1.6, 0.78, 48), frostingPinkMat);
+      tier2.position.y = -0.2;
+      masterGroup.add(tier2);
+
+      const rim2 = new THREE.Mesh(new THREE.TorusGeometry(1.62, 0.07, 16, 48), goldMat);
+      rim2.rotation.x = Math.PI / 2;
+      rim2.position.y = -0.58;
+      masterGroup.add(rim2);
+
+      // Tier 3 (Top Tier - Champagne Cream)
+      const tier3 = new THREE.Mesh(new THREE.CylinderGeometry(1.05, 1.05, 0.7, 48), softBlushMat);
+      tier3.position.y = 0.52;
+      masterGroup.add(tier3);
+
+      const rim3 = new THREE.Mesh(new THREE.TorusGeometry(1.07, 0.06, 16, 48), goldMat);
+      rim3.rotation.x = Math.PI / 2;
+      rim3.position.y = 0.18;
+      masterGroup.add(rim3);
+
+      // Royal Princess Tiara Topper
+      const tiaraGroup = new THREE.Group();
+      tiaraGroup.position.set(0, 1.05, 0);
+
+      const tiaraRing = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.05, 16, 32), goldMat);
+      tiaraRing.rotation.x = Math.PI / 2;
+      tiaraGroup.add(tiaraRing);
+
+      const spikeGeo = new THREE.ConeGeometry(0.08, 0.35, 16);
+      const rubyMat = new THREE.MeshPhongMaterial({ color: 0xff1493, shininess: 160 });
+
+      for (let i = 0; i < 7; i++) {
+        const ang = (i / 7) * Math.PI * 2;
+        const spike = new THREE.Mesh(spikeGeo, goldMat);
+        spike.position.set(Math.cos(ang) * 0.48, 0.18, Math.sin(ang) * 0.48);
+        spike.rotation.y = -ang;
+        spike.rotation.z = -0.15;
+        tiaraGroup.add(spike);
+
+        const gem = new THREE.Mesh(new THREE.SphereGeometry(0.06, 16, 16), rubyMat);
+        gem.position.set(Math.cos(ang) * 0.49, 0.36, Math.sin(ang) * 0.49);
+        tiaraGroup.add(gem);
+      }
+      masterGroup.add(tiaraGroup);
+
+      // Golden Snitch
+      const snitchGroup = new THREE.Group();
+      const snitchBody = new THREE.Mesh(
+        new THREE.SphereGeometry(0.22, 24, 24),
+        new THREE.MeshPhongMaterial({ color: 0xffd700, shininess: 180 })
+      );
+      snitchGroup.add(snitchBody);
+
+      const wingMat = new THREE.MeshPhongMaterial({ color: 0xfff8dc, transparent: true, opacity: 0.85, side: THREE.DoubleSide });
+      const wingGeo = new THREE.PlaneGeometry(0.6, 0.2);
+      const leftWing = new THREE.Mesh(wingGeo, wingMat);
+      leftWing.position.set(-0.38, 0.08, 0);
+      leftWing.rotation.y = 0.4;
+      snitchGroup.add(leftWing);
+
+      const rightWing = new THREE.Mesh(wingGeo, wingMat);
+      rightWing.position.set(0.38, 0.08, 0);
+      rightWing.rotation.y = -0.4;
+      snitchGroup.add(rightWing);
+
+      scene.add(snitchGroup);
+
+      // 7 Rose-Gold Flickering Candles
+      const candleMat = new THREE.MeshPhongMaterial({ color: 0xfff5f8, shininess: 80 });
+      const flameMat = new THREE.MeshBasicMaterial({ color: 0xff8500 });
+      const innerFlameMat = new THREE.MeshBasicMaterial({ color: 0xfffd82 });
+
+      const candlePositions = [
+        [-0.6, 0.9, -0.25],
+        [0.6, 0.9, -0.25],
+        [0.0, 0.9, 0.65],
+        [-0.48, 0.9, 0.4],
+        [0.48, 0.9, 0.4],
+        [-0.28, 0.9, -0.55],
+        [0.28, 0.9, -0.55]
+      ];
+
+      const flames = [];
+      candlePositions.forEach((pos) => {
+        const c = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.4, 16), candleMat);
+        c.position.set(pos[0], pos[1], pos[2]);
+        masterGroup.add(c);
+
+        const flameGrp = new THREE.Group();
+        flameGrp.position.set(pos[0], pos[1] + 0.28, pos[2]);
+
+        const outF = new THREE.Mesh(new THREE.ConeGeometry(0.06, 0.18, 16), flameMat);
+        flameGrp.add(outF);
+
+        const inF = new THREE.Mesh(new THREE.ConeGeometry(0.035, 0.12, 16), innerFlameMat);
+        inF.position.y = 0.02;
+        flameGrp.add(inF);
+
+        masterGroup.add(flameGrp);
+        flames.push(flameGrp);
+      });
+
+      // Ambient Floating Starlight Particles
+      const pCount = 180;
+      const pGeo = new THREE.BufferGeometry();
+      const pPos = new Float32Array(pCount * 3);
+      for (let i = 0; i < pCount; i++) {
+        pPos[i * 3] = (Math.random() - 0.5) * 14;
+        pPos[i * 3 + 1] = (Math.random() - 0.5) * 8;
+        pPos[i * 3 + 2] = (Math.random() - 0.5) * 10;
+      }
+      pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+      const pMat = new THREE.PointsMaterial({
+        size: 0.14,
+        color: 0xff85a1,
+        transparent: true,
+        opacity: 0.85,
+        blending: THREE.AdditiveBlending
+      });
+      const stars = new THREE.Points(pGeo, pMat);
+      scene.add(stars);
+
+      // Mouse Parallax & Interaction
+      let mouseX = 0;
+      let mouseY = 0;
+      let spinBoost = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+      });
+
+      window.addEventListener('click', (e) => {
+        if (e.target.closest('button, a, input, textarea')) return;
+        spinBoost = 0.35;
+      });
+
+      window.addEventListener('resize', () => {
+        const w = container.clientWidth || window.innerWidth;
+        const h = container.clientHeight || window.innerHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      });
+
+      // Global candle flame controls
+      window.blowOutPrincessCandles = function() {
+        flames.forEach(f => { f.visible = false; });
+        const banner = document.getElementById('candleBanner');
+        if (banner) banner.classList.remove('hidden');
+        triggerConfetti();
+        playSFX('cheer');
+      };
+
+      window.relightPrincessCandles = function() {
+        flames.forEach(f => { f.visible = true; });
+        const banner = document.getElementById('candleBanner');
+        if (banner) banner.classList.add('hidden');
+        playSFX('spell');
+      };
+
+      // Animation Loop
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const time = clock.getElapsedTime();
+
+        // Smooth subtle Parallax
+        const targetRotY = mouseX * 0.45;
+        const targetRotX = mouseY * 0.18;
+        masterGroup.rotation.y += (targetRotY - masterGroup.rotation.y) * 0.05 + 0.006 + spinBoost;
+        masterGroup.rotation.x += (targetRotX - masterGroup.rotation.x) * 0.05;
+        masterGroup.position.y = Math.sin(time * 1.5) * 0.1;
+
+        if (spinBoost > 0) {
+          spinBoost *= 0.94;
+          if (spinBoost < 0.001) spinBoost = 0;
+        }
+
+        // Golden Snitch Flight Orbit
+        const snitchRad = 3.0;
+        const snitchAng = time * 1.6;
+        snitchGroup.position.set(
+          Math.cos(snitchAng) * snitchRad,
+          0.6 + Math.sin(time * 3.0) * 0.8,
+          Math.sin(snitchAng) * snitchRad
+        );
+        snitchGroup.rotation.y = -snitchAng - Math.PI / 2;
+        leftWing.rotation.z = Math.sin(time * 35) * 0.55;
+        rightWing.rotation.z = -Math.sin(time * 35) * 0.55;
+        snitchLight.position.copy(snitchGroup.position);
+
+        // Candle Flames Flicker
+        flames.forEach((flame, idx) => {
+          const s = 1.0 + Math.sin(time * 14 + idx * 2.2) * 0.2;
+          flame.scale.set(s, s * 1.15, s);
+        });
+
+        // Stars gentle drift
+        stars.rotation.y = time * 0.04;
+
+        renderer.render(scene, camera);
+      }
+      animate();
+    });
+  </script>
+
+</body>
+</html>
